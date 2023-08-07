@@ -3,7 +3,7 @@ function Navbar() {
 
         <div>
 
-            <h1>TES</h1>
+            <h1>Bisa Lah Ya</h1>
 
         </div>
     )
