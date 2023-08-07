@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+import Navbar from './Component/Navbar/Navbar';
 import './App.css';
 
 function App() {
@@ -18,11 +19,10 @@ function App() {
           Learn React
         </a>
       </header>
+
+      <Navbar />
+
     </div>
-
-
-
-
   );
 }
 
