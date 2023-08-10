@@ -1,21 +1,4 @@
 {
-    "product1": [
-        {
-            "name": "Sepatu",
-            "price": 1000000,
-            "id": 1
-        },
-        {
-            "name": "Kaos",
-            "price": 300000,
-            "id": 2
-        },
-        {
-            "name": "Celana",
-            "price": 100000,
-            "id": 3
-        }
-    ],
     "user": [
         {
             "id": 1,
@@ -30,6 +13,13 @@
             "lastName": "wijaya",
             "email": "andre@gmail.com",
             "password": "qwerty"
+        },
+        {
+            "id": 3,
+            "firstName": "M",
+            "lastName": "Haekal",
+            "email": "haekal@gmail.com",
+            "password": "54321"
         }
     ],
     "products": [
@@ -218,9 +208,9 @@
             "id": 8
         },
         {
-            "productName": "NBA Playoff: LA Lakers vs Boston Celtics",
+            "productName": "NBA: LA Lakers vs Boston Celtics",
             "image": [
-                "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
+                "https://firstsportz.com/wp-content/uploads/2021/11/Adobe-Post-20211118-1738180.21986487993532577-3-1024x576.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
             ],
             "ticketCat": [
@@ -241,9 +231,9 @@
             "id": 9
         },
         {
-            "productName": "NBA Playoff: Golden State Warriors vs Chicago Bulls",
+            "productName": "NBA: Golden State Warriors vs Chicago Bulls",
             "image": [
-                "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
+                "https://www.lineups.com/wp-content/uploads/2018/12/warriors-vs-bulls.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
             ],
             "ticketCat": [
@@ -264,9 +254,9 @@
             "id": 10
         },
         {
-            "productName": "NBA Playoff: Golden State Warriors vs Milwaukee Bucks",
+            "productName": "NBA: Golden State Warriors vs Milwaukee Bucks",
             "image": [
-                "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
+                "https://www.lineups.com/wp-content/uploads/2018/12/warriors-vs-bucks.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
             ],
             "ticketCat": [
@@ -287,9 +277,9 @@
             "id": 11
         },
         {
-            "productName": "NBA Playoff: Chicago Bulls vs Golden State Warriors",
+            "productName": "NBA: Chicago Bulls vs Golden State Warriors",
             "image": [
-                "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
+                "https://cdn.nba.com/teams/legacy/www.nba.com/bulls/sites/bulls/files/mybulls_19_gsw.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
             ],
             "ticketCat": [

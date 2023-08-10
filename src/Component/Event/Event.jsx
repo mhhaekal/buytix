@@ -13,7 +13,7 @@ function Event() {
         try {
             const response = await axios.get(`http://localhost:4123/products`)
             console.log(response.data.slice(0, 8))
-            SetProducts(response.data.slice(0, 8))
+            SetProducts(response.data.slice())
 
         } catch (error) {
             console.log(error);
