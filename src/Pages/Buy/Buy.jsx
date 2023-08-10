@@ -50,7 +50,7 @@ function Buy() {
                         </div>
 
                         <div>
-                            <div className="mb-2 pb-2 mt-12 font-bold text-2xl border border-b-4 border-white border-b-purple-800">Contact Information</div>
+                            <div className="pb-3 mt-12 font-bold text-2xl">Contact Information</div>
 
                             <div className="w-[auto] flex flex-wrap gap-5 ">
 
