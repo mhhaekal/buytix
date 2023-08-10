@@ -218,7 +218,7 @@
             "id": 8
         },
         {
-            "productName": "NBA Playoff: LA Lakers vs Chicago Bulls",
+            "productName": "NBA Playoff: LA Lakers vs Boston Celtics",
             "image": [
                 "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
@@ -235,13 +235,13 @@
             ],
             "date": "15 Nov 2023",
             "time": "08:00pm",
-            "location": "Crypto.com Arena Los Angeles, USA",
-            "seller": "AndreW",
+            "location": "Crypto.com Arena, Los Angeles, USA",
+            "seller": "Mamat",
             "category": 6,
             "id": 9
         },
         {
-            "productName": "NBA Playoff: LA Lakers vs Chicago Bulls",
+            "productName": "NBA Playoff: Golden State Warriors vs Chicago Bulls",
             "image": [
                 "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
@@ -258,13 +258,13 @@
             ],
             "date": "15 Nov 2023",
             "time": "08:00pm",
-            "location": "Crypto.com Arena Los Angeles, USA",
-            "seller": "AndreW",
+            "location": "Chase Center, Los Angeles, USA",
+            "seller": "BayuK",
             "category": 6,
             "id": 10
         },
         {
-            "productName": "NBA Playoff: LA Lakers vs Chicago Bulls",
+            "productName": "NBA Playoff: Golden State Warriors vs Milwaukee Bucks",
             "image": [
                 "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
@@ -281,13 +281,13 @@
             ],
             "date": "15 Nov 2023",
             "time": "08:00pm",
-            "location": "Crypto.com Arena Los Angeles, USA",
+            "location": "Chase Center, Los Angeles, USA",
             "seller": "AndreW",
             "category": 6,
             "id": 11
         },
         {
-            "productName": "NBA Playoff: LA Lakers vs Chicago Bulls",
+            "productName": "NBA Playoff: Chicago Bulls vs Golden State Warriors",
             "image": [
                 "https://i.ytimg.com/vi/Brw2anrJAq8/maxresdefault.jpg",
                 "https://erigostore.co.id/cdn/shop/files/id-11134201-7qul9-libacce72npy3a.jpg?v=1687491669"
@@ -304,7 +304,7 @@
             ],
             "date": "15 Nov 2023",
             "time": "08:00pm",
-            "location": "Crypto.com Arena Los Angeles, USA",
+            "location": "United Center, Chicago, USA",
             "seller": "AndreW",
             "category": 6,
             "id": 12
