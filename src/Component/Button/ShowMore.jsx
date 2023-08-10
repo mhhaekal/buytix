@@ -1,4 +1,5 @@
-function Navbar() {
+function ShowMore() {
+
     return (
         <div>
 
@@ -10,4 +11,4 @@ function Navbar() {
 }
 
 
-export default Navbar
+
