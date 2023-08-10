@@ -38,7 +38,7 @@ function Event() {
                     Event
                 </div>
                 <div className="mt-16 mx-40 dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-none text-white">Sort</label>
+                    <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-full text-white">Sort</label>
                     <div className="dropdown-content">
 
                     </div>
