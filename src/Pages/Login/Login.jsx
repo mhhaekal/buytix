@@ -1,8 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import InputText from "../../Component/Input Text/InputText";
 import { onLoginAsync } from "../../redux/Features";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
+
 function Login() {
   const [inputEmail, setInputEmail] = useState("");
   const [inputPassword, setInputPassword] = useState("");
@@ -14,14 +16,13 @@ function Login() {
     console.log(inputEmail);
     console.log(inputPassword);
     dispatch(onLoginAsync(inputEmail, inputPassword));
-    if (firstName) {
-      // alert("Selamat Datang Kembali")
-      // setTimeout(() => {
-      navigate("/");
-      // }, 2000);
-    }
   };
 
+  useEffect(() => {
+    if (firstName) {
+      navigate("/");
+    }
+  }, [firstName]);
   return (
     <div className="h-screen">
       <div className="flex h-screen">
@@ -62,9 +63,11 @@ function Login() {
           </div>
 
           <div>
-            <button className="w-[500px] my-3 ml-24 rounded-lg bg-black h-[50px] text-white">
-              CREATE AN ACCOUNT
-            </button>
+            <Link to={"/register"}>
+              <button className="w-[500px] my-3 ml-24 rounded-lg bg-black h-[50px] text-white">
+                CREATE AN ACCOUNT
+              </button>
+            </Link>
           </div>
         </div>
         <div className="w-[40%] bg-gradient-to-r from-black to-purple-800"></div>
