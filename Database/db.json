@@ -39,6 +39,12 @@
                 5,
                 7
             ],
+            "price": [
+                11000000,
+                8000000,
+                5000000
+            ],
+            "details": "Jakarta, 9 May 2023 - Coldplay have announced their hugely-anticipated return to Asia and Australia with a special run of stadium shows in November 2023, as part of their record-breaking Music Of The Spheres World Tour. The announcement marks the band’s first ever show in Jakarta, taking place on 15 November at Gelora Bung Karno Stadium.",
             "date": "15 Nov 2023",
             "time": "08:00pm",
             "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",

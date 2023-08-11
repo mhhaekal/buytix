@@ -13,6 +13,7 @@ import BuySuccess from './Pages/Buy/BuySucess';
 import Create from './Pages/Create/Create,';
 import CreateSucess from './Pages/Create/CreateSucess';
 import AllEvents from './Pages/AllEvents/AllEvents';
+import CardPage from './Pages/CardItem/CardPage';
 
 
 
@@ -31,7 +32,7 @@ function App() {
         <Route path='/create' element={<Create />} />
         <Route path='/create/success' element={<CreateSucess />} />
         <Route path='/allevents' element={<AllEvents />} />
-
+        <Route path='/carditem/:id' element={<CardPage />} />
       </Routes>
     </div>
   );

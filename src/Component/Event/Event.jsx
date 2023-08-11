@@ -58,7 +58,9 @@ function Event() {
                 {products.map((value, index) => {
                     return (
                         <div key={index}>
-                            <Card item={value} />
+                            <Link to={`./carditem/${value.id}`}>
+                                <Card item={value} />
+                            </Link>
                         </div>
                     )
                 })
