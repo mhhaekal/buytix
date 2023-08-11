@@ -1,3 +1,0 @@
-<div>
-    ini bayu
-</div>
