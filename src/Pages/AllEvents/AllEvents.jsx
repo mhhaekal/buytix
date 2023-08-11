@@ -13,14 +13,18 @@ function AllEvents() {
     const [products, setProducts] = useState([])
     const [selectedType, setselectedType] = useState([])
     const [type, setType] = useState([])
+    const [location, setLocation] = useState([])
+
+    const name = "Gelora Bung Karno Stadium, Jakarta, Indonesia"
 
 
     const fetchData = async () => {
         try {
             const ticket = await axios.get(`http://localhost:4123/products`)
+            const loc = await axios.get(`http://localhost:4123/products?location=${name}`)
             const type = await axios.get('http://localhost:4123/category')
 
-            console.log(ticket.data);
+            console.log(loc);
             setBackupProducts(ticket.data);
             setProducts(ticket.data)
             setType(type.data)
@@ -30,8 +34,10 @@ function AllEvents() {
         }
     }
 
+
     const handleCheckbox = (_typeId) => {
         const tempSelectedType = [...selectedType]
+        // console.log(tempSelectedType)
         const tempProducts = [...backupProducts]
 
         if (tempSelectedType.includes(_typeId)) {
