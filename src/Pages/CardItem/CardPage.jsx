@@ -1,8 +1,9 @@
 import axios from "axios"
 import { useEffect, useState, useRef } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import Nav from "../../Component/Nav/Nav";
 import Footer from "../../Component/Footer/Footer"
+
 
 export default function CardPage() {
     const [products, setProduct] = useState(null);
@@ -80,8 +81,11 @@ export default function CardPage() {
                                     <div className=" font-semibold text-purple-800 pb-5"> by {products.seller}</div>
 
                                     <div className=" ">
-                                        <button className="btn btn-primary w-[300px]">Buy Now</button>
+                                        <Link to={`/buy/${id}`}>
+                                            <button className="btn btn-primary w-[300px]">Buy Now</button>
+                                        </Link>
                                     </div>
+
                                 </div>
                             </div>
                         </div>

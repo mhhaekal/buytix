@@ -27,7 +27,7 @@ function App() {
         <Route path='/category' element={<CatPage />} />
         <Route path='/login' element={<Login />} />
         <Route path='/register' element={<Register />} />
-        <Route path='/buy' element={<Buy />} />
+        <Route path='/buy/:id' element={<Buy />} />
         <Route path='/buy/success' element={<BuySuccess />} />
         <Route path='/create' element={<Create />} />
         <Route path='/create/success' element={<CreateSucess />} />
