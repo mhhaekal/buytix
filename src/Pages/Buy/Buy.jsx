@@ -1,5 +1,4 @@
-import InputText from "../../Component/Input Text/InputText"
-
+import { Link } from "react-router-dom"
 
 function Buy() {
     return (
@@ -95,10 +94,12 @@ function Buy() {
                         </div>
 
 
-                        <div className="flex gap-10">
-                            <div>
-                                <button className="mt-16 btn btn-neutral w-[300px] font-bold">CANCEL</button>
-                            </div>
+                        <div className="flex gap-5">
+                            <Link to={'/'}>
+                                <div>
+                                    <button className="mt-16 btn bg-black hover:bg-black text-white w-[300px] font-bold">CANCEL</button>
+                                </div>
+                            </Link>
                             <div>
                                 <button className="mt-16 btn btn-primary w-[300px] font-bold">BUY</button>
                             </div>

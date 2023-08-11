@@ -2,21 +2,21 @@ import { useEffect, useState } from "react"
 import Card from "../Card/Card"
 import Skeleton from "../Skeleton/Skeleton";
 import axios from 'axios';
+import { Link } from "react-router-dom";
 
 
 function Event() {
 
-
     const [products, SetProducts] = useState(null)
-
 
     const fetchData = async () => {
         try {
             const response = await axios.get(`http://localhost:4123/products`)
-            SetProducts(response.data)
+            console.log(response.data.slice(0, 8))
+            SetProducts(response.data.slice(0, 8))
 
         } catch (error) {
-
+            console.log(error);
         }
     }
 
@@ -26,12 +26,9 @@ function Event() {
 
     if (!products) {
         return <div>
-
             <Skeleton />
-
         </div>
     }
-
 
     return (
         <div className="mt-10">
@@ -41,7 +38,7 @@ function Event() {
                     Event
                 </div>
                 <div className="mt-16 mx-40 dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-none text-white">Sort</label>
+                    <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-full text-white">Sort</label>
                     <div className="dropdown-content">
 
                     </div>
@@ -51,11 +48,11 @@ function Event() {
                         <li><a>Lowest to Highest Price</a></li>
                     </ul>
                 </div>
-
             </div>
 
 
-            <div className=" mx-40 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>
+            <div className=" mx-40 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]">
+            </div>
 
             <div className="flex flex-wrap justify-between mx-40 gap-10">
                 {products.map((value, index) => {
@@ -69,9 +66,10 @@ function Event() {
             </div>
 
             <div className="mt-20 flex justify-center">
-                <button className="mx-40 btn w-[300px] font-extrabold">SHOW MORE EVENTS!</button>
+                <Link to={'/allevents'}>
+                    <button className="mx-40 btn w-[300px] font-extrabold">SHOW MORE EVENTS!</button>
+                </Link>
             </div>
-
 
         </div>
     )

@@ -21,7 +21,9 @@ function Nav() {
                 <div className="navbar-end flex-none flex gap-3">
 
                     <div className="btn btn-ghost bg-black text-white">Location</div>
-                    <div className="btn btn-ghost bg-black text-white">Create Event</div>
+                    <Link to={"/create"}>
+                        <div className="btn btn-ghost bg-black text-white">Create Event</div>
+                    </Link>
                     <div className="btn btn-ghost bg-black text-white">Username</div>
                 </div>
 

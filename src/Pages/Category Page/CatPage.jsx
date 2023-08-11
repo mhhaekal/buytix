@@ -3,15 +3,26 @@ import CatPageCard from "./CatPageCard"
 import Footer from "../../Component/Footer/Footer"
 import axios from "axios"
 import { useEffect, useState } from "react"
+import { useLocation, useParams, useSearchParams } from "react-router-dom"
+
+
 
 
 function CatPage() {
 
+
     const [products, setProducts] = useState([])
+    const [category, setCategory] = useState([])
+
+
+    const search = useLocation().search;
+    const id = new URLSearchParams(search).get("category")
+    // console.log(id)
+
 
     const fetchData = async () => {
         try {
-            const ticket = await axios.get(`http://localhost:4123/products?category=1`)
+            const ticket = await axios.get(`http://localhost:4123/products?category=${id}`)
             console.log(ticket.data);
             setProducts(ticket.data)
 
@@ -20,8 +31,21 @@ function CatPage() {
         }
     }
 
+    const fetchCatName = async () => {
+        try {
+            const catName = await axios.get(`http://localhost:4123/category/${id}`)
+            console.log(catName.data.name)
+            setCategory(catName.data.name.toUpperCase())
+        } catch (error) {
+
+        }
+
+    }
+
+
     useEffect(() => {
         fetchData()
+        fetchCatName()
     }, [])
 
 
@@ -36,7 +60,9 @@ function CatPage() {
                     <div className="mt-20">
 
                         <div className="flex">
-                            <div className="w-[51%] mx-40 font-bold text-5xl pb-4">MUSIC</div>
+                            <div className="w-[51%] mx-40 font-bold text-5xl pb-4">
+                                {category}
+                            </div>
                             <div className="dropdown dropdown-end">
                                 <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-full text-white m-1">LOCATION</label>
                                 <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
@@ -64,7 +90,10 @@ function CatPage() {
 
 
                 </div>
-                <div className="w-[25%] h-[100] bg-gradient-to-r from-black to-purple-800"></div>
+                <div className="w-[25%] h-[vh] bg-gradient-to-r from-black to-purple-800">
+
+
+                </div>
             </div>
 
             <Footer />

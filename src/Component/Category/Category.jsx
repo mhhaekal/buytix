@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import CategoryBtn from "./CategoryBtn"
 import axios from "axios"
+import { Link } from "react-router-dom"
+
 
 function Category() {
 
@@ -40,7 +42,9 @@ function Category() {
                 {category.map((value, index) => {
                     return (
                         <div key={index}>
-                            <CategoryBtn item={value} />
+                            <Link to={`/category?category=${value.id}`}>
+                                <CategoryBtn item={value} />
+                            </Link>
                         </div>
 
                     )
