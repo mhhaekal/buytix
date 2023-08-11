@@ -27,6 +27,9 @@ function Nav() {
                     <div className="btn btn-ghost bg-black text-white">Username</div>
                 </div>
 
+
+                <div>HELLO WORLD</div>
+
             </div>
 
         </div>
