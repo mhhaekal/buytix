@@ -1,27 +1,38 @@
-import logo from './logo.svg';
-import Navbar from './Component/Navbar/Navbar';
 import './App.css';
+
+import { Routes, Route } from 'react-router-dom';
+
+//Pages & Components
+import Login from './Pages/Login/Login';
+import Register from './Pages/Register/Register';
+import Landing from './Pages/Landing/Landing';
+import LandingV2 from './Pages/Landing/LandingV2';
+import CatPage from './Pages/Category Page/CatPage';
+import Buy from './Pages/Buy/Buy';
+import BuySuccess from './Pages/Buy/BuySucess';
+import Create from './Pages/Create/Create,';
+import CreateSucess from './Pages/Create/CreateSucess';
+import AllEvents from './Pages/AllEvents/AllEvents';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div data-theme="light">
 
-      <Navbar />
+      <Routes>
+        <Route path='/' element={<Landing />} />
+        <Route path='/landing' element={<LandingV2 />} />
+        <Route path='/category' element={<CatPage />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />} />
+        <Route path='/buy' element={<Buy />} />
+        <Route path='/buy/success' element={<BuySuccess />} />
+        <Route path='/create' element={<Create />} />
+        <Route path='/create/success' element={<CreateSucess />} />
+        <Route path='/allevents' element={<AllEvents />} />
 
+      </Routes>
     </div>
   );
 }
