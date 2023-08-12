@@ -15,11 +15,11 @@ export default function CardPage() {
         try {
             const res = await axios.get(`http://localhost:4123/products/${id}`);
             console.log(res);
-            const totalStock = res.data.stocks.reduce((a, b) => {
-                return a + b
-            })
+            // const totalStock = res.data.stocks.reduce((a, b) => {
+            //     return a + b
+            // })
 
-            setSelected({ ...selected, stockSize: totalStock })
+            // setSelected({ ...selected, stockSize: totalStock })
             setProduct(res.data);
         } catch (error) { }
     };
@@ -42,7 +42,7 @@ export default function CardPage() {
 
 
                         <div>
-                            <img className="h-[500px] w-full object-fit pb-10 px-64 py-10" src={products.image[0]} alt="" />
+                            <img className="h-[500px] w-full object-fit pb-10 px-64 py-10" src={products.image} alt="" />
                         </div>
 
 

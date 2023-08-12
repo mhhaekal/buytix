@@ -12,8 +12,8 @@ function Event() {
     const fetchData = async () => {
         try {
             const response = await axios.get(`http://localhost:4123/products`)
-            console.log(response.data.slice(0, 8))
-            SetProducts(response.data.slice(0, 8))
+            console.log(response.data.slice())
+            SetProducts(response.data.slice())
 
         } catch (error) {
             console.log(error);
