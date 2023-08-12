@@ -298,5 +298,50 @@
             "name": "Badminton",
             "id": 8
         }
+    ],
+    "tickets": [
+        {
+            "userId": 1,
+            "firstName": "MH",
+            "lastName": "Haekal",
+            "email": "haekal@gmail.com",
+            "phoneNumber": "082110055558",
+            "refCode": true,
+            "id": 1
+        },
+        {
+            "userId": 2,
+            "firstName": "BK",
+            "lastName": "Prasetya",
+            "email": "bkprasetya@gmail.com",
+            "phoneNumber": "082112436747",
+            "refCode": true,
+            "id": 2
+        },
+        {
+            "userId": 3,
+            "firstName": "AT",
+            "lastName": "Wijaya",
+            "email": "andrean@gmail.com",
+            "phoneNumber": "082213807460",
+            "refCode": true,
+            "id": 3
+        },
+        {
+            "firstName": "Test",
+            "lastName": "ABC",
+            "email": "haekal123@gmail.com",
+            "phoneNumber": "082110055559",
+            "refCode": "",
+            "id": 4
+        },
+        {
+            "firstName": "Test1",
+            "lastName": "ABCD",
+            "email": "haekal1234@gmail.com",
+            "phoneNumber": "082110055550",
+            "refCode": "",
+            "id": 5
+        }
     ]
 }

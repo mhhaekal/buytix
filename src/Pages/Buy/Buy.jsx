@@ -2,78 +2,94 @@ import { Link } from "react-router-dom"
 import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export default function Buy() {
     const [products, setProduct] = useState(null);
     const { id } = useParams();
-    const [selected, setSelected] = useState({})
-    const qty = useRef()
+    const inputFirstName = useRef();
+    const inputLastName = useRef();
+    const inputEmail = useRef();
+    const inputPhoneNumber = useRef();
+    const inputRefCode = useRef();
+    const navigate = useNavigate();
+    const [discount, setDiscount] = useState(null)
 
     const onFetchData = async () => {
         try {
             const res = await axios.get(`http://localhost:4123/products/${id}`);
             console.log(res);
-            // const totalStock = res.data.stocks.reduce((a, b) => {
-            //     return a + b
-            // })
-
-            // setSelected({ ...selected, stockSize: totalStock })
             setProduct(res.data);
         } catch (error) { }
     };
 
+    const onCheckRef = async () => {
+        try {
+            const checkRef = await axios.get(`http://localhost:4123/products/${id}`);
+            // console.log(checkRef.data.code)
+            if (inputRefCode.current.value === checkRef.data.code) {
+                console.log("sama guys")
+                const fixPrice = (checkRef.data.discount / 100) * checkRef.data.price
+                setDiscount(fixPrice)
+                // console.log(fixPrice)
+            }
+        } catch (error) {
+            console.log(error)
+        }
+    }
+
+    const onBuyEvent = async () => {
+        try {
+            const inputs = {
+                firstName: inputFirstName.current.value,
+                lastName: inputLastName.current.value,
+                email: inputEmail.current.value,
+                phoneNumber: inputPhoneNumber.current.value,
+                refCode: inputRefCode.current.value,
+            };
+            if (inputs.email == "") {
+                alert("Gaboleh Kosong Guys")
+            } else {
+                await axios.post(`http://localhost:4123/tickets`, { ...inputs });
+                console.log(inputs)
+                if (inputs) return navigate('/create/success')
+            }
+
+            // toast.success('Create Event Success!')
+            // alert("Create Event Success!");
+            // setTimeout(() => {
+            //     <Link to={'/'}></Link>
+            // }, 3000)
+            // if (inputs) return navigate('/create/success')
+        } catch (error) {
+            console.log(error);
+        }
+    };
     useEffect(() => {
+        console.log(discount)
         onFetchData();
-    }, []);
+    }, [discount]);
+
 
     return (
         <div >
             {
                 !products ? null : (
-                    <div className="flex">
+                    <div className="flex h-screen">
                         <div className="w-[70%]">
 
-                            <div className="mx-36 mt-10 mb-[100px]">
+                            <div className="mx-36 mt-10 mb-[50px]">
                                 <div>
                                     <div className=" w-[700px] text-6xl font-bold pb-5">{products.productName} </div>
 
                                     <div className="flex gap-1 font-bold mb-3">
-                                        <div className="text-gray-500">{products.date} -</div>
-                                        <div className="text-gray-500">{products.time} -</div>
+                                        <div className="text-gray-500">{products.date} |</div>
+                                        <div className="text-gray-500">{products.time} |</div>
                                         <div className="text-gray-500">{products.location} |</div>
                                         <div className="text-purple-800">by {products.seller}</div>
                                     </div>
 
                                     <div className=" mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>
-                                </div>
-
-                                <div>
-                                    <div className="pb-3 font-bold text-2xl">Ticket Information</div>
-                                    <div className="flex gap-10">
-                                        <div className="form-control ">
-                                            <label className="label">
-                                                <span className="label-text font-bold">Ticket Category</span>
-                                            </label>
-                                            <select className="select select-bordered">
-                                                <option disabled selected>Pick one</option>
-                                                <option>VIP</option>
-                                                <option>CAT1</option>
-                                                <option>CAT2</option>
-                                            </select>
-                                        </div>
-                                        <div className="form-control">
-                                            <label className="label">
-                                                <span className="label-text font-bold">Choose Ammount</span>
-                                            </label>
-                                            <select className="select select-bordered">
-                                                <option disabled selected></option>
-                                                <option>1</option>
-                                                <option>2</option>
-                                                <option>3</option>
-                                                <option>4</option>
-                                            </select>
-                                        </div>
-                                    </div>
                                 </div>
 
                                 <div>
@@ -85,34 +101,34 @@ export default function Buy() {
                                             <label className="label">
                                                 <span className="label-text font-bold">First Name</span>
                                             </label>
-                                            <input type="text" className="input input-bordered w-[300px]" />
+                                            <input type="text" ref={inputFirstName} className="input input-bordered w-[300px]" />
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text font-bold">Last Name</span>
                                             </label>
-                                            <input type="text" className="input input-bordered w-[300px]" />
+                                            <input type="text" ref={inputLastName} className="input input-bordered w-[300px]" />
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text font-bold">Email</span>
                                             </label>
-                                            <input type="text" className="input input-bordered w-[300px]" />
+                                            <input type="text" ref={inputEmail} className="input input-bordered w-[300px]" />
                                         </div>
                                         <div className="form-control">
                                             <label className="label">
                                                 <span className="label-text font-bold">Phone Number</span>
                                             </label>
-                                            <input type="text" className="input input-bordered w-[300px]" />
+                                            <input type="text" ref={inputPhoneNumber} className="input input-bordered w-[300px]" />
                                         </div>
                                         <div className="form-control flex flex-row gap-5">
                                             <div>
                                                 <label className="label">
                                                     <span className="label-text font-bold">Referral Code</span>
                                                 </label>
-                                                <input type="text" className="input input-bordered w-[300px]" /></div>
+                                                <input type="text" ref={inputRefCode} className="input input-bordered w-[300px]" /></div>
 
-                                            <button className="mt-9 btn w-44 font-bold">SUBMIT</button>
+                                            <button onClick={onCheckRef} className="mt-9 btn w-44 font-bold">SUBMIT</button>
                                         </div>
 
                                     </div>
@@ -129,7 +145,7 @@ export default function Buy() {
                                     </Link>
                                     <Link to={``}>
                                         <div>
-                                            <button className="mt-16 btn btn-primary w-[300px] font-bold">BUY</button>
+                                            <button onClick={onBuyEvent} className="mt-16 btn btn-primary w-[300px] font-bold">BUY</button>
                                         </div>
                                     </Link>
                                 </div>
@@ -146,15 +162,22 @@ export default function Buy() {
                                 <div className="flex justify-end text-3xl font-extrabold">Order Summary</div>
                                 <div className="flex justify-between">
                                     <div className="flex gap-3">
-                                        <div>x</div>
                                         <div>VIP</div>
                                     </div>
                                     <div>Rpxxxxx</div>
                                 </div>
 
+
                                 <div className="flex justify-between">
                                     <div>Discount</div>
-                                    <div>-Rpxxxx</div>
+                                    {discount ?
+                                        <div>{
+                                            discount
+                                        }</div>
+                                        :
+                                        <div>-Rpxxxx</div>
+                                    }
+
                                 </div>
 
                                 <div className="h-2 bg-white"></div>
