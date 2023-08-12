@@ -7,8 +7,7 @@ import { useNavigate } from "react-router-dom";
 export default function Create() {
     const inputProductName = useRef();
     const inputImage = useRef();
-    const inputTicketCat = useRef();
-    // const inputStocks = useRef();
+    const inputCode = useRef();
     const inputPrice = useRef();
     const inputDetails = useRef();
     const inputDate = useRef();
@@ -24,16 +23,15 @@ export default function Create() {
             const inputs = {
                 productName: inputProductName.current.value,
                 image: inputImage.current.value,
-                ticketCat: inputTicketCat.current.value,
-                // stocks: inputStocks.current.value,
-                price: inputPrice.current.value,
+                code: inputCode.current.value,
+                price: Number(inputPrice.current.value),
                 details: inputDetails.current.value,
                 date: inputDate.current.value,
                 time: inputTime.current.value,
                 location: inputLocation.current.value,
                 // seller: inputSeller.current.value,
                 category: Number(inputCategory.current.value),
-                discount: inputDiscount.current.value,
+                discount: Number(inputDiscount.current.value),
             };
             // await axios.post(`http://localhost:4123/products`, { ...inputs });
             // console.log(inputs)
@@ -42,6 +40,7 @@ export default function Create() {
             } else {
                 await axios.post(`http://localhost:4123/products`, { ...inputs });
                 console.log(inputs)
+                if (inputs) return navigate('/create/success')
             }
 
             // toast.success('Create Event Success!')
@@ -91,7 +90,6 @@ export default function Create() {
                         <label className="label">
                             <span className="label-text font-bold">Event Category</span>
                         </label>
-                        {/* <input type="text" ref={inputCategory} className="input input-bordered w-[400px]" /> */}
                         <select ref={inputCategory} className="select select-bordered">
                             <option disabled selected>
                                 Pick one
@@ -106,27 +104,20 @@ export default function Create() {
                             <option value="8">Badminton</option>
                         </select>
                     </div>
-                    <div>
 
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text font-bold">Location</span>
-                            </label>
-                            <input type="text" ref={inputLocation} className="input input-bordered w-[400px]" />
-                        </div>
-                        <div className="form-control">
-                            <label className="label">
-                                <span className="label-text font-bold"> Image (Link)</span>
-                            </label>
-                            <input type="text" ref={inputImage} className="input input-bordered w-[400px]" />
-                        </div>
-                        {/* <div className="form-control">
-                            <label className="label">
-                                <span className="label-text font-bold"> Stock </span>
-                            </label>
-                            <input type="text" ref={inputStocks} className="input input-bordered w-[400px]" />
-                        </div> */}
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold">Location</span>
+                        </label>
+                        <input type="text" ref={inputLocation} className="input input-bordered w-[400px]" />
                     </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold"> Image (Link)</span>
+                        </label>
+                        <input type="text" ref={inputImage} className="input input-bordered w-[400px]" />
+                    </div>
+
                     <div>
                         <div>
                             <label className="label">
@@ -148,44 +139,32 @@ export default function Create() {
                     <div className="text-2xl font-extrabold">Ticket Pricing</div>
                     <div className="mt-3 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>
                 </div>
-
                 <div className="flex gap-5 items-center">
-                    <div className="form-control">
-                        <label className="label">
-                            <span className="label-text font-bold">Ticket Category</span>
-                        </label>
-                        <input type="text" ref={inputTicketCat} className="input input-bordered w-[400px]" />
-                        {/* <select ref={inputTicketCat} className="select select-bordered">
-                            <option disabled selected>
-                                Pick one
-                            </option>
-                            <option>VIP</option>
-                            <option>CAT1</option>
-                            <option>CAT2</option>
-                        </select> */}
-                    </div>
                     <div className="form-control flex">
                         <div>
                             <label className="label">
                                 <span className="label-text font-bold">Ticket Price</span>
                             </label>
-                            <input type="text" ref={inputPrice} className="input input-bordered w-[300px]" />
+                            <input type="number" ref={inputPrice} className="input input-bordered w-[400px]" />
                         </div>
                     </div>
-                    <div className="h-full mt-8">
-                        <div className="btn">SUBMIT</div>
+                    <div>
+                        <label className="label">
+                            <span className="label-text font-bold">Referral Discount (%)</span>
+                        </label>
+                        <input type="number" ref={inputDiscount} className="input input-bordered w-[400px]" />
                     </div>
+                    <div className="form-control">
+                        <label className="label">
+                            <span className="label-text font-bold">Type Your Referal Code</span>
+                        </label>
+                        <input type="text" ref={inputCode} className="input input-bordered w-[400px]" />
+                    </div>
+
                 </div>
 
-                <div className="mt-5 h-[200px] border w-[65%] shadow-sm"></div>
-                <div className="mt-5">
-                    <label className="label">
-                        <span className="label-text font-bold">Referral Discount</span>
-                    </label>
-                    <input type="number" ref={inputDiscount} className="input input-bordered w-[300px]" />
-                </div>
 
-                <div className="pt-20">
+                <div className="flex justify-end pt-32">
                     <Link to={"/"}>
                         <div className="btn bg-black text-white w-[200px] hover:bg-black">CANCEL</div>
                     </Link>
