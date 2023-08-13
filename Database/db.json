@@ -1,478 +1,478 @@
 {
-  "user": [
-    {
-      "id": 1,
-      "firstName": "bayu",
-      "lastName": "krisna",
-      "email": "bayu@gmail.com",
-      "password": "12345"
-    },
-    {
-      "id": 2,
-      "firstName": "andre",
-      "lastName": "wijaya",
-      "email": "andre@gmail.com",
-      "password": "qwerty"
-    },
-    {
-      "id": 3,
-      "firstName": "M",
-      "lastName": "Haekal",
-      "email": "haekal@gmail.com",
-      "password": "54321"
-    }
-  ],
-  "products": [
-    {
-      "productName": "Coldplay : Music of The Spheres Concert",
-      "image": "https://assets.loket.com/imgdir/2023-05-05/48/48f966262aea4deda759e8353bf5cabc2a0ac6a3127393267168104395.jpg",
-      "code": "CHRISMARTIN",
-      "price": 3500000,
-      "details": "Jakarta, 9 May 2023 - Coldplay have announced their hugely-anticipated return to Asia and Australia with a special run of stadium shows in November 2023, as part of their record-breaking Music Of The Spheres World Tour. The announcement marks the band’s first ever show in Jakarta, taking place on 15 November at Gelora Bung Karno Stadium.",
-      "date": "2023-11-15",
-      "time": "20:00",
-      "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
-      "locationId": 1,
-      "category": 1,
-      "discount": 10,
-      "id": 1
-    },
-    {
-      "productName": "BLACKPINK: Born Pink",
-      "image": "https://cdn06.pramborsfm.com/storage/app/media/Prambors/Editorial%202/BLACKPINK-20220921171557.jpg?tr=w-8009",
-      "code": "LISABP",
-      "price": 2500000,
-      "details": "Get ready to experience a musical extravaganza like no other as BLACKPINK, the global sensation, takes the stage in an electrifying concert that will leave you breathless. Mark your calendars for a night of sensational performances, captivating visuals, and unforgettable moments.",
-      "date": "2023-11-20",
-      "time": "20:00",
-      "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
-      "locationId": 1,
-      "category": 1,
-      "discount": 15,
-      "id": 2
-    },
-    {
-      "productName": "OpenMic: Raditya Dika",
-      "image": "https://assets.jatimnetwork.com/crop/0x0:0x0/750x500/webp/photo/2022/07/05/600606511.jpg",
-      "code": "RADIT20",
-      "price": 800000,
-      "details": "Prepare yourself for a night of uncontrollable laughter as the comedy maestro Raditya Dika takes the stage for an uproarious stand-up comedy show that will have you rolling in the aisles. Brace yourself for a side-splitting experience that promises to tickle your funny bone and leave you in stitches.",
-      "date": "2023-11-19",
-      "time": "10:00",
-      "location": "ICE BSD, South Tangerang, Indonesia",
-      "locationId": 1,
-      "category": 2,
-      "discount": 20,
-      "id": 3
-    },
-    {
-      "productName": "Liga 1: Persija vs PSM Makasar",
-      "image": "https://asset-2.tstatic.net/toraja/foto/bank/images/Persija-Jakarta-vs-PSM-Makassar-Liga-1.jpg",
-      "code": "BPAMUNGAS",
-      "price": 1500000,
-      "details": "Get ready for a football extravaganza that will have you on the edge of your seat as two powerhouses of Indonesian football clash in an epic battle that's bound to leave fans exhilarated. Witness the intensity, skill, and passion of the game as Persija takes on PSM Makassar in a match that promises to be a thrilling spectacle.",
-      "date": "2023-22-19",
-      "time": "14:00",
-      "location": "Jakarta International Stadium, Jakarta, Indonesia",
-      "locationId": 1,
-      "category": 5,
-      "discount": 10,
-      "id": 4
-    },
-    {
-      "productName": "MotoGP Mandalika",
-      "code": "ROSSI46",
-      "image": "https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/01/02/1515331761.jpg",
-      "price": 4000000,
-      "details": "Rev up your engines and prepare for a heart-pounding race experience like no other as the world's premier motorcycle racing championship, MotoGP, roars into Mandalika, Indonesia. Brace yourself for high-speed action, adrenaline-pumping thrills, and the electrifying atmosphere of the Grand Prix Mandalika.",
-      "date": "2023-11-11",
-      "time": "15:00",
-      "location": "Mandalika Circuit, Lombok, Indonesia",
-      "locationId": 1,
-      "category": 4,
-      "discount": 10,
-      "id": 5
-    },
-    {
-      "productName": "NewJeans Concert",
-      "image": "https://www.nme.com/wp-content/uploads/2023/06/newjeans-get-up-eta.jpg",
-      "code": "NEWJEANSINDONESIA",
-      "price": 2500000,
-      "details": "Prepare to be swept off your feet by the electrifying beats and soulful melodies of NewJeans as they light up the stage in a concert that will leave you craving for more. Get ready to immerse yourself in a musical journey that transcends genres and takes you on a rollercoaster of emotions.",
-      "date": "2023-10-19",
-      "time": "19:00",
-      "location": "ICE BSD, South Tangerang, Indonesia",
-      "locationId": 1,
-      "category": 1,
-      "discount": 5,
-      "id": 6
-    },
-    {
-      "productName": "F1 Singapore GP",
-      "image": "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2022/5/25/j8tzdfqjfnxciaca06qc/f1-22-red-bull-racing-rb18-sergio-perez",
-      "code": "MAXMAXMAX",
-      "price": 15000000,
-      "details": "Gear up for a high-octane extravaganza as the F1 Singapore Grand Prix returns to illuminate the city with blazing speed, heart-pounding races, and a dazzling display of motorsport prowess. Get ready to witness the world's top drivers and teams compete under the lights in a race that blends athleticism, technology, and sheer excitement.",
-      "date": "2024-1-20",
-      "time": "20:00",
-      "location": "Singapore Int. Circuit, Singapore",
-      "locationId": 3,
-      "category": 4,
-      "discount": 10,
-      "id": 7
-    },
-    {
-      "productName": "NBA Playoff: LA Lakers vs Chicago Bulls",
-      "image": "https://cdn.nba.com/davinci/images/team-matchups/nba/latest/web/lal-chi/1200x628.png",
-      "code": "KOBEMJ",
-      "price": 5000000,
-      "details": "Get ready for a basketball spectacle that will have fans on the edge of their seats as two basketball giants collide in an electrifying NBA match. Brace yourself for a game filled with high-flying dunks, clutch shots, and intense competition as the Los Angeles Lakers take on the Chicago Bulls in a showdown for the ages.",
-      "date": "2023-12-1",
-      "time": "20:00",
-      "location": "Crypto.com Arena, Los Angeles, USA",
-      "locationId": 2,
-      "category": 6,
-      "discount": 40,
-      "id": 8
-    },
-    {
-      "productName": "NBA: LA Lakers vs Boston Celtics",
-      "image": "https://cdn.nba.com/davinci/images/team-matchups/nba/latest/web/bos-lal/1200x628.png",
-      "code": "KOBEEE",
-      "price": 5000000,
-      "details": "Prepare for a basketball clash that transcends time and ignites the passion of fans worldwide as the Los Angeles Lakers go head-to-head with the Boston Celtics in an epic NBA matchup. Get ready to witness history, intensity, and the magic of two legendary franchises colliding on the court.",
-      "date": "2023-12-19",
-      "time": "20:00",
-      "location": "Crypto.com Arena, Los Angeles, USA",
-      "locationId": 2,
-      "category": 6,
-      "discount": 40,
-      "id": 9
-    },
-    {
-      "productName": "NBA: Golden State Warriors vs Chicago Bulls",
-      "image": "https://www.lineups.com/wp-content/uploads/2018/12/warriors-vs-bulls.jpg",
-      "code": "CURRYBALL",
-      "price": 5000000,
-      "details": "Get ready for an exhilarating basketball extravaganza as the Golden State Warriors and the Chicago Bulls collide on the court in a battle of contrasting styles and extraordinary talent. Prepare to witness a game that promises to be a showcase of skill, teamwork, and the sheer excitement of NBA basketball.",
-      "date": "2023-12-4",
-      "time": "20:00",
-      "location": "Chase Center, San Francisco, USA",
-      "locationId": 2,
-      "category": 6,
-      "discount": 8,
-      "id": 10
-    },
-    {
-      "productName": "NBA: Golden State Warriors vs Milwaukee Bucks",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHk_EE_XLr0CQb-tRZVFgVpeY_1KH34O1TKQ&usqp=CAU",
-      "code": "CURRYBALLS",
-      "price": 5000000,
-      "details": "Get ready for an electrifying basketball showdown as the Golden State Warriors and the Milwaukee Bucks go head-to-head in a game that promises to be a thrilling showcase of NBA talent and intensity. Prepare for a night of high-flying dunks, precision plays, and a battle for supremacy on the hardwood.",
-      "date": "2023-12-8",
-      "time": "20:00",
-      "location": "Chase Center, San Francisco, USA",
-      "locationId": 2,
-      "category": 6,
-      "discount": 30,
-      "id": 11
-    },
-    {
-      "productName": "NBA: Chicago Bulls vs Golden State Warriors",
-      "image": "https://hoopshype.com/wp-content/uploads/sites/92/2021/11/i_92_13_65_GSW_vs_CHI.png?w=1000&h=600&crop=1",
-      "code": "MJGOAT",
-      "price": 6000000,
-      "details": "Prepare for an unforgettable basketball spectacle as the Chicago Bulls face off against the Golden State Warriors in a game that promises to blend tradition with innovation. Get ready to witness a clash of cultures and styles that will keep fans on the edge of their seats from tip-off to the final buzzer.",
-      "date": "2023-12-14",
-      "time": "19:00",
-      "location": "United Center, Chicago, USA",
-      "locationId": 2,
-      "category": 6,
-      "discount": 23,
-      "id": 12
-    },
-    {
-      "productName": "RACE DAY: ALL AUTOMOTIVE INFLUENCER",
-      "image": "https://cdn0-production-images-kly.akamaized.net/EDGLyZfiPyeo6OY3R1KdhOJ9IjY=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1029190/original/015437300_1445494195-Chang_International_Circuit.jpg",
-      "code": "MERDEKA78",
-      "price": 200000,
-      "details": "Rev up your engines and get ready for a thrilling showdown as automotive influencers from around the region go head-to-head in a high-speed race at the iconic Sentul International Circuit. Prepare to witness a spectacle of speed, skill, and the undeniable passion for all things automotive.",
-      "date": "2023-08-17",
-      "time": "16:00",
-      "location": "Sentul International Circuit",
-      "locationId": 1,
-      "category": 4,
-      "discount": 70,
-      "id": 13
-    },
-    {
-      "productName": "PCN Purwadika: Old Money Strikes Back",
-      "image": "https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/logo_purwadhika.original.png",
-      "code": "PURWADHIKAJAYA",
-      "price": 150000,
-      "details": "Unlock the world of digital literacy and embrace the future with confidence by joining us for an insightful seminar hosted by Purwadhika, the pioneers of tech and digital education. Get ready to enhance your skills, broaden your horizons, and navigate the digital landscape with expertise.",
-      "date": "2023-11-5",
-      "time": "13:30",
-      "location": "Purwadhika BSD, South Tangerang, Indonesia",
-      "locationId": 1,
-      "category": 3,
-      "discount": 10,
-      "id": 14
-    },
-    {
-      "productName": "Hacktiv8: Digital Litteracy!",
-      "image": "https://y6a2n7m3.rocketcdn.me/wp-content/uploads/2023/02/Hacktiv8-BSD-860x515.jpeg",
-      "code": "HAPPYHACKING",
-      "price": 150000,
-      "details": "Unlock the world of digital literacy and embrace the future with confidence by joining us for an insightful seminar hosted by Hacktiv8, the pioneers of tech and digital education. Get ready to enhance your skills, broaden your horizons, and navigate the digital landscape with expertise.",
-      "date": "2023-11-6",
-      "time": "13:30",
-      "location": "Hacktiv8 BSD, South Tangerang, Indonesia",
-      "locationId": 1,
-      "category": 3,
-      "discount": 5,
-      "id": 15
-    },
-    {
-      "productName": "Product Manager Seminar by RevoU",
-      "image": "https://assets-global.website-files.com/61af164800e38c4f53c60b4e/639acedfe1266ceb271e6d56_RevoU%20chapter.jpg",
-      "code": "PM23",
-      "price": 20000,
-      "details": "Embark on a journey of professional growth and innovation by joining us for an immersive seminar hosted by revoU, the leaders in tech education. Get ready to amplify your product management expertise, gain insights from industry experts, and unlock new dimensions of success.",
-      "date": "2023-11-7",
-      "time": "14:00",
-      "location": "GOP 1 BSD, South Tangerang, Indonesia",
-      "locationId": 1,
-      "category": 3,
-      "discount": 5,
-      "id": 16
-    },
-    {
-      "productName": "Dave Chapple Show: Singapore",
-      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZIO8oDAtWp2iNl0npP3B324IdLZQWh7cT-46jDvso5XNOLZeCvfgwajidhqhpjyWvF1Q&usqp=CAU",
-      "code": "DPSG",
-      "price": 2000000,
-      "details": "Get ready to burst into laughter as the comedic genius Dave Chapple takes center stage for an unforgettable night of stand-up comedy in the heart of Singapore. Brace yourself for a hilarious evening filled with side-splitting jokes, witty anecdotes, and non-stop laughter.",
-      "date": "2023-12-10",
-      "time": "20:00",
-      "location": "Singapore Laugh Club, Singapore",
-      "locationId": 3,
-      "category": 2,
-      "discount": 10,
-      "id": 17
-    },
-    {
-      "productName": "PSSI: Indonesia vs Mancity",
-      "image": "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt1e96cfeabee0d128/647ca7b17ad7771d75e23d01/GettyImages-1495689259.jpg?auto=webp&format=pjpg&width=3840&quality=60",
-      "code": "LORDHALLAND",
-      "price": 2000000,
-      "details": "Get ready for a historic football event as the Indonesian national team, Timnas Indonesia, faces off against the mighty Manchester City in an exhibition match that promises excitement, passion, and football brilliance. Prepare to witness a showcase of skill and determination as these two teams collide on the pitch",
-      "date": "2023-11-19",
-      "time": "19:00",
-      "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
-      "locationId": 1,
-      "category": 5,
-      "discount": 10,
-      "id": 18
-    },
-    {
-      "productName": "PB DJARUM: INDONESIA VS DENMARK",
-      "image": "https://asset-2.tstatic.net/kalteng/foto/bank/images/anthony-sinisuka-ginting-vs-wakil-denmark-viktor-axelsen_20180920_183929.jpg",
-      "code": "GINTINGSHOT",
-      "price": 1500000,
-      "details": "Get ready for a badminton spectacle that will have fans cheering as Indonesia and Denmark's top players compete in an exhilarating match that promises to showcase skill, strategy, and sheer determination on the court. Brace yourself for a battle of champions that will keep you on the edge of your seat.",
-      "date": "2023-10-10",
-      "time": "14:00",
-      "location": "Istora Senayan, Jakarta, Indonesia",
-      "locationId": 1,
-      "category": 8,
-      "discount": 10,
-      "id": 19
-    },
-    {
-      "productName": "PB DJARUM: INDONESIA VS JAPAN",
-      "image": "https://asset-2.tstatic.net/sumsel/foto/bank/images/Hasil-Kejuaraan-Asia-Junior-2023-Indonesia-vs-Jepang-Al-FariziJoaquin-Gagal-Bawa-Indonesia-Juara.jpg",
-      "code": "MINIONS",
-      "price": 1500000,
-      "details": "Get ready for a badminton spectacle that will have fans cheering as Indonesia and Denmark's top players compete in an exhilarating match that promises to showcase skill, strategy, and sheer determination on the court. Brace yourself for a battle of champions that will keep you on the edge of your seat.",
-      "date": "2023-10-11",
-      "time": "14:00",
-      "location": "Istora Senayan, Jakarta, Indonesia",
-      "locationId": 1,
-      "category": 8,
-      "discount": 10,
-      "id": 20
-    },
-    {
-      "productName": "TRAVIS SCOTT UTOPIA CONCERT",
-      "image": "https://media.pitchfork.com/photos/64d4f35c94b0ef4633cc8332/2:1/w_2560%2Cc_limit/pitchfork-review-template_Wide.png",
-      "code": "UTOPIAAOTY",
-      "price": 5000000,
-      "details": "Prepare to be blown away by an electrifying performance as the legendary Travis Scott takes the stage at Rolling Loud Miami. Get ready for an unforgettable night of high-energy music, mind-blowing visuals, and a show that will leave you in awe.",
-      "date": "2023-09-01",
-      "time": "23:00",
-      "location": "Hard Rock Stadium, Miami, USA",
-      "category": 1,
-      "discount": 10,
-      "locationId": 2,
-      "id": 21
-    },
-    {
-      "productName": "PSSI: Indonesia vs Brazil",
-      "image": "https://awsimages.detik.net.id/visual/2023/05/13/timnas-indonesia-u-22-menang-melawan-vietnam-dalam-lanjutan-sea-games-2023-kamboja-2_169.jpeg?w=650",
-      "code": "ASNAWIGOAT",
-      "price": 2000000,
-      "details": "Get ready for an unforgettable football extravaganza as Indonesia goes head-to-head with the football giants Brazil in an international friendly match that promises excitement, skill, and a showcase of football brilliance. Brace yourself for a clash that will captivate fans and showcase the beauty of the beautiful game.",
-      "date": "2023-08-29",
-      "time": "19:00",
-      "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
-      "category": 5,
-      "discount": 10,
-      "locationId": 1,
-      "id": 22
-    },
-    {
-      "productName": "Test ",
-      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Battledore-and-shuttlecock.jpg",
-      "code": "BADMINTON2023",
-      "price": 100000,
-      "details": "Test",
-      "date": "2023-08-31",
-      "time": "20:00",
-      "location": "ICE",
-      "category": 8,
-      "discount": 20,
-      "locationId": 1,
-      "id": 23
-    }
-  ],
-  "category": [
-    {
-      "name": "Music",
-      "id": 1
-    },
-    {
-      "name": "Comedy",
-      "id": 2
-    },
-    {
-      "name": "Education",
-      "id": 3
-    },
-    {
-      "name": "Racing",
-      "id": 4
-    },
-    {
-      "name": "Football",
-      "id": 5
-    },
-    {
-      "name": "Basketball",
-      "id": 6
-    },
-    {
-      "name": "Tennis",
-      "id": 7
-    },
-    {
-      "name": "Badminton",
-      "id": 8
-    }
-  ],
-  "tickets": [
-    {
-      "userId": 1,
-      "firstName": "MH",
-      "lastName": "Haekal",
-      "email": "haekal@gmail.com",
-      "phoneNumber": "082110055558",
-      "refCode": true,
-      "id": 1
-    },
-    {
-      "userId": 2,
-      "firstName": "BK",
-      "lastName": "Prasetya",
-      "email": "bkprasetya@gmail.com",
-      "phoneNumber": "082112436747",
-      "refCode": true,
-      "id": 2
-    },
-    {
-      "userId": 3,
-      "firstName": "AT",
-      "lastName": "Wijaya",
-      "email": "andrean@gmail.com",
-      "phoneNumber": "082213807460",
-      "refCode": true,
-      "id": 3
-    },
-    {
-      "firstName": "Test",
-      "lastName": "ABC",
-      "email": "haekal123@gmail.com",
-      "phoneNumber": "082110055559",
-      "refCode": "",
-      "id": 4
-    },
-    {
-      "firstName": "Test1",
-      "lastName": "ABCD",
-      "email": "haekal1234@gmail.com",
-      "phoneNumber": "082110055550",
-      "refCode": "",
-      "id": 5
-    },
-    {
-      "firstName": "Gapake",
-      "lastName": "Ref",
-      "email": "haekal@gmail.com",
-      "phoneNumber": "082110055558",
-      "refCode": "",
-      "id": 6
-    },
-    {
-      "firstName": "Pake",
-      "lastName": "Ref",
-      "email": "haekal@gmail.com",
-      "phoneNumber": "082110055558",
-      "refCode": "LISABP",
-      "id": 7
-    },
-    {
-      "firstName": "Pake",
-      "lastName": "Ref",
-      "email": "haekal@gmail.com",
-      "phoneNumber": "082110055559",
-      "refCode": "CHRISMARTIN",
-      "id": 8
-    },
-    {
-      "firstName": "Pake",
-      "lastName": "Ref",
-      "email": "haekal@gmail.com",
-      "phoneNumber": "082110055558",
-      "refCode": "BADMINTON2023",
-      "id": 9
-    }
-  ],
-  "locations": [
-    {
-      "id": 1,
-      "name": "Indonesia"
-    },
-    {
-      "id": 2,
-      "name": "USA"
-    },
-    {
-      "id": 3,
-      "name": "Singapore"
-    },
-    {
-      "id": 4,
-      "name": "Other Countries"
-    }
-  ]
+    "user": [
+        {
+            "id": 1,
+            "firstName": "bayu",
+            "lastName": "krisna",
+            "email": "bayu@gmail.com",
+            "password": "12345"
+        },
+        {
+            "id": 2,
+            "firstName": "andre",
+            "lastName": "wijaya",
+            "email": "andre@gmail.com",
+            "password": "qwerty"
+        },
+        {
+            "id": 3,
+            "firstName": "M",
+            "lastName": "Haekal",
+            "email": "haekal@gmail.com",
+            "password": "54321"
+        }
+    ],
+    "products": [
+        {
+            "productName": "Coldplay : Music of The Spheres Concert",
+            "image": "https://assets.loket.com/imgdir/2023-05-05/48/48f966262aea4deda759e8353bf5cabc2a0ac6a3127393267168104395.jpg",
+            "code": "CHRISMARTIN",
+            "price": 3500000,
+            "details": "Jakarta, 9 May 2023 - Coldplay have announced their hugely-anticipated return to Asia and Australia with a special run of stadium shows in November 2023, as part of their record-breaking Music Of The Spheres World Tour. The announcement marks the band’s first ever show in Jakarta, taking place on 15 November at Gelora Bung Karno Stadium.",
+            "date": "2023-11-15",
+            "time": "20:00",
+            "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
+            "locationId": 1,
+            "category": 1,
+            "discount": 10,
+            "id": 1
+        },
+        {
+            "productName": "BLACKPINK: Born Pink",
+            "image": "https://cdn06.pramborsfm.com/storage/app/media/Prambors/Editorial%202/BLACKPINK-20220921171557.jpg?tr=w-8009",
+            "code": "LISABP",
+            "price": 2500000,
+            "details": "Get ready to experience a musical extravaganza like no other as BLACKPINK, the global sensation, takes the stage in an electrifying concert that will leave you breathless. Mark your calendars for a night of sensational performances, captivating visuals, and unforgettable moments.",
+            "date": "2023-11-20",
+            "time": "20:00",
+            "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
+            "locationId": 1,
+            "category": 1,
+            "discount": 15,
+            "id": 2
+        },
+        {
+            "productName": "OpenMic: Raditya Dika",
+            "image": "https://assets.jatimnetwork.com/crop/0x0:0x0/750x500/webp/photo/2022/07/05/600606511.jpg",
+            "code": "RADIT20",
+            "price": 800000,
+            "details": "Prepare yourself for a night of uncontrollable laughter as the comedy maestro Raditya Dika takes the stage for an uproarious stand-up comedy show that will have you rolling in the aisles. Brace yourself for a side-splitting experience that promises to tickle your funny bone and leave you in stitches.",
+            "date": "2023-11-19",
+            "time": "10:00",
+            "location": "ICE BSD, South Tangerang, Indonesia",
+            "locationId": 1,
+            "category": 2,
+            "discount": 20,
+            "id": 3
+        },
+        {
+            "productName": "Liga 1: Persija vs PSM Makasar",
+            "image": "https://asset-2.tstatic.net/toraja/foto/bank/images/Persija-Jakarta-vs-PSM-Makassar-Liga-1.jpg",
+            "code": "BPAMUNGAS",
+            "price": 1500000,
+            "details": "Get ready for a football extravaganza that will have you on the edge of your seat as two powerhouses of Indonesian football clash in an epic battle that's bound to leave fans exhilarated. Witness the intensity, skill, and passion of the game as Persija takes on PSM Makassar in a match that promises to be a thrilling spectacle.",
+            "date": "2023-22-19",
+            "time": "14:00",
+            "location": "Jakarta International Stadium, Jakarta, Indonesia",
+            "locationId": 1,
+            "category": 5,
+            "discount": 10,
+            "id": 4
+        },
+        {
+            "productName": "MotoGP Mandalika",
+            "code": "ROSSI46",
+            "image": "https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/01/02/1515331761.jpg",
+            "price": 4000000,
+            "details": "Rev up your engines and prepare for a heart-pounding race experience like no other as the world's premier motorcycle racing championship, MotoGP, roars into Mandalika, Indonesia. Brace yourself for high-speed action, adrenaline-pumping thrills, and the electrifying atmosphere of the Grand Prix Mandalika.",
+            "date": "2023-11-11",
+            "time": "15:00",
+            "location": "Mandalika Circuit, Lombok, Indonesia",
+            "locationId": 1,
+            "category": 4,
+            "discount": 10,
+            "id": 5
+        },
+        {
+            "productName": "NewJeans Concert",
+            "image": "https://www.nme.com/wp-content/uploads/2023/06/newjeans-get-up-eta.jpg",
+            "code": "NEWJEANSINDONESIA",
+            "price": 2500000,
+            "details": "Prepare to be swept off your feet by the electrifying beats and soulful melodies of NewJeans as they light up the stage in a concert that will leave you craving for more. Get ready to immerse yourself in a musical journey that transcends genres and takes you on a rollercoaster of emotions.",
+            "date": "2023-10-19",
+            "time": "19:00",
+            "location": "ICE BSD, South Tangerang, Indonesia",
+            "locationId": 1,
+            "category": 1,
+            "discount": 5,
+            "id": 6
+        },
+        {
+            "productName": "F1 Singapore GP",
+            "image": "https://img.redbull.com/images/c_limit,w_1500,h_1000,f_auto,q_auto/redbullcom/2022/5/25/j8tzdfqjfnxciaca06qc/f1-22-red-bull-racing-rb18-sergio-perez",
+            "code": "MAXMAXMAX",
+            "price": 15000000,
+            "details": "Gear up for a high-octane extravaganza as the F1 Singapore Grand Prix returns to illuminate the city with blazing speed, heart-pounding races, and a dazzling display of motorsport prowess. Get ready to witness the world's top drivers and teams compete under the lights in a race that blends athleticism, technology, and sheer excitement.",
+            "date": "2024-1-20",
+            "time": "20:00",
+            "location": "Singapore Int. Circuit, Singapore",
+            "locationId": 3,
+            "category": 4,
+            "discount": 10,
+            "id": 7
+        },
+        {
+            "productName": "NBA Playoff: LA Lakers vs Chicago Bulls",
+            "image": "https://cdn.nba.com/davinci/images/team-matchups/nba/latest/web/lal-chi/1200x628.png",
+            "code": "KOBEMJ",
+            "price": 5000000,
+            "details": "Get ready for a basketball spectacle that will have fans on the edge of their seats as two basketball giants collide in an electrifying NBA match. Brace yourself for a game filled with high-flying dunks, clutch shots, and intense competition as the Los Angeles Lakers take on the Chicago Bulls in a showdown for the ages.",
+            "date": "2023-12-1",
+            "time": "20:00",
+            "location": "Crypto.com Arena, Los Angeles, USA",
+            "locationId": 2,
+            "category": 6,
+            "discount": 40,
+            "id": 8
+        },
+        {
+            "productName": "NBA: LA Lakers vs Boston Celtics",
+            "image": "https://cdn.nba.com/davinci/images/team-matchups/nba/latest/web/bos-lal/1200x628.png",
+            "code": "KOBEEE",
+            "price": 5000000,
+            "details": "Prepare for a basketball clash that transcends time and ignites the passion of fans worldwide as the Los Angeles Lakers go head-to-head with the Boston Celtics in an epic NBA matchup. Get ready to witness history, intensity, and the magic of two legendary franchises colliding on the court.",
+            "date": "2023-12-19",
+            "time": "20:00",
+            "location": "Crypto.com Arena, Los Angeles, USA",
+            "locationId": 2,
+            "category": 6,
+            "discount": 40,
+            "id": 9
+        },
+        {
+            "productName": "NBA: Golden State Warriors vs Chicago Bulls",
+            "image": "https://www.lineups.com/wp-content/uploads/2018/12/warriors-vs-bulls.jpg",
+            "code": "CURRYBALL",
+            "price": 5000000,
+            "details": "Get ready for an exhilarating basketball extravaganza as the Golden State Warriors and the Chicago Bulls collide on the court in a battle of contrasting styles and extraordinary talent. Prepare to witness a game that promises to be a showcase of skill, teamwork, and the sheer excitement of NBA basketball.",
+            "date": "2023-12-4",
+            "time": "20:00",
+            "location": "Chase Center, San Francisco, USA",
+            "locationId": 2,
+            "category": 6,
+            "discount": 8,
+            "id": 10
+        },
+        {
+            "productName": "NBA: Golden State Warriors vs Milwaukee Bucks",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHk_EE_XLr0CQb-tRZVFgVpeY_1KH34O1TKQ&usqp=CAU",
+            "code": "CURRYBALLS",
+            "price": 5000000,
+            "details": "Get ready for an electrifying basketball showdown as the Golden State Warriors and the Milwaukee Bucks go head-to-head in a game that promises to be a thrilling showcase of NBA talent and intensity. Prepare for a night of high-flying dunks, precision plays, and a battle for supremacy on the hardwood.",
+            "date": "2023-12-8",
+            "time": "20:00",
+            "location": "Chase Center, San Francisco, USA",
+            "locationId": 2,
+            "category": 6,
+            "discount": 30,
+            "id": 11
+        },
+        {
+            "productName": "NBA: Chicago Bulls vs Golden State Warriors",
+            "image": "https://hoopshype.com/wp-content/uploads/sites/92/2021/11/i_92_13_65_GSW_vs_CHI.png?w=1000&h=600&crop=1",
+            "code": "MJGOAT",
+            "price": 6000000,
+            "details": "Prepare for an unforgettable basketball spectacle as the Chicago Bulls face off against the Golden State Warriors in a game that promises to blend tradition with innovation. Get ready to witness a clash of cultures and styles that will keep fans on the edge of their seats from tip-off to the final buzzer.",
+            "date": "2023-12-14",
+            "time": "19:00",
+            "location": "United Center, Chicago, USA",
+            "locationId": 2,
+            "category": 6,
+            "discount": 23,
+            "id": 12
+        },
+        {
+            "productName": "RACE DAY: ALL AUTOMOTIVE INFLUENCER",
+            "image": "https://cdn0-production-images-kly.akamaized.net/EDGLyZfiPyeo6OY3R1KdhOJ9IjY=/1200x675/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/1029190/original/015437300_1445494195-Chang_International_Circuit.jpg",
+            "code": "MERDEKA78",
+            "price": 200000,
+            "details": "Rev up your engines and get ready for a thrilling showdown as automotive influencers from around the region go head-to-head in a high-speed race at the iconic Sentul International Circuit. Prepare to witness a spectacle of speed, skill, and the undeniable passion for all things automotive.",
+            "date": "2023-08-17",
+            "time": "16:00",
+            "location": "Sentul International Circuit",
+            "locationId": 1,
+            "category": 4,
+            "discount": 70,
+            "id": 13
+        },
+        {
+            "productName": "PCN Purwadika: Old Money Strikes Back",
+            "image": "https://storage.googleapis.com/danacita-website-v3-prd/website_v3/images/logo_purwadhika.original.png",
+            "code": "PURWADHIKAJAYA",
+            "price": 150000,
+            "details": "Unlock the world of digital literacy and embrace the future with confidence by joining us for an insightful seminar hosted by Purwadhika, the pioneers of tech and digital education. Get ready to enhance your skills, broaden your horizons, and navigate the digital landscape with expertise.",
+            "date": "2023-11-5",
+            "time": "13:30",
+            "location": "Purwadhika BSD, South Tangerang, Indonesia",
+            "locationId": 1,
+            "category": 3,
+            "discount": 10,
+            "id": 14
+        },
+        {
+            "productName": "Hacktiv8: Digital Litteracy!",
+            "image": "https://y6a2n7m3.rocketcdn.me/wp-content/uploads/2023/02/Hacktiv8-BSD-860x515.jpeg",
+            "code": "HAPPYHACKING",
+            "price": 150000,
+            "details": "Unlock the world of digital literacy and embrace the future with confidence by joining us for an insightful seminar hosted by Hacktiv8, the pioneers of tech and digital education. Get ready to enhance your skills, broaden your horizons, and navigate the digital landscape with expertise.",
+            "date": "2023-11-6",
+            "time": "13:30",
+            "location": "Hacktiv8 BSD, South Tangerang, Indonesia",
+            "locationId": 1,
+            "category": 3,
+            "discount": 5,
+            "id": 15
+        },
+        {
+            "productName": "Product Manager Seminar by RevoU",
+            "image": "https://assets-global.website-files.com/61af164800e38c4f53c60b4e/639acedfe1266ceb271e6d56_RevoU%20chapter.jpg",
+            "code": "PM23",
+            "price": 20000,
+            "details": "Embark on a journey of professional growth and innovation by joining us for an immersive seminar hosted by revoU, the leaders in tech education. Get ready to amplify your product management expertise, gain insights from industry experts, and unlock new dimensions of success.",
+            "date": "2023-11-7",
+            "time": "14:00",
+            "location": "GOP 1 BSD, South Tangerang, Indonesia",
+            "locationId": 1,
+            "category": 3,
+            "discount": 5,
+            "id": 16
+        },
+        {
+            "productName": "Dave Chapple Show: Singapore",
+            "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZIO8oDAtWp2iNl0npP3B324IdLZQWh7cT-46jDvso5XNOLZeCvfgwajidhqhpjyWvF1Q&usqp=CAU",
+            "code": "DPSG",
+            "price": 2000000,
+            "details": "Get ready to burst into laughter as the comedic genius Dave Chapple takes center stage for an unforgettable night of stand-up comedy in the heart of Singapore. Brace yourself for a hilarious evening filled with side-splitting jokes, witty anecdotes, and non-stop laughter.",
+            "date": "2023-12-10",
+            "time": "20:00",
+            "location": "Singapore Laugh Club, Singapore",
+            "locationId": 3,
+            "category": 2,
+            "discount": 10,
+            "id": 17
+        },
+        {
+            "productName": "PSSI: Indonesia vs Mancity",
+            "image": "https://assets.goal.com/v3/assets/bltcc7a7ffd2fbf71f5/blt1e96cfeabee0d128/647ca7b17ad7771d75e23d01/GettyImages-1495689259.jpg?auto=webp&format=pjpg&width=3840&quality=60",
+            "code": "LORDHALLAND",
+            "price": 2000000,
+            "details": "Get ready for a historic football event as the Indonesian national team, Timnas Indonesia, faces off against the mighty Manchester City in an exhibition match that promises excitement, passion, and football brilliance. Prepare to witness a showcase of skill and determination as these two teams collide on the pitch",
+            "date": "2023-11-19",
+            "time": "19:00",
+            "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
+            "locationId": 1,
+            "category": 5,
+            "discount": 10,
+            "id": 18
+        },
+        {
+            "productName": "PB DJARUM: INDONESIA VS DENMARK",
+            "image": "https://asset-2.tstatic.net/kalteng/foto/bank/images/anthony-sinisuka-ginting-vs-wakil-denmark-viktor-axelsen_20180920_183929.jpg",
+            "code": "GINTINGSHOT",
+            "price": 1500000,
+            "details": "Get ready for a badminton spectacle that will have fans cheering as Indonesia and Denmark's top players compete in an exhilarating match that promises to showcase skill, strategy, and sheer determination on the court. Brace yourself for a battle of champions that will keep you on the edge of your seat.",
+            "date": "2023-10-10",
+            "time": "14:00",
+            "location": "Istora Senayan, Jakarta, Indonesia",
+            "locationId": 1,
+            "category": 8,
+            "discount": 10,
+            "id": 19
+        },
+        {
+            "productName": "PB DJARUM: INDONESIA VS JAPAN",
+            "image": "https://asset-2.tstatic.net/sumsel/foto/bank/images/Hasil-Kejuaraan-Asia-Junior-2023-Indonesia-vs-Jepang-Al-FariziJoaquin-Gagal-Bawa-Indonesia-Juara.jpg",
+            "code": "MINIONS",
+            "price": 1500000,
+            "details": "Get ready for a badminton spectacle that will have fans cheering as Indonesia and Denmark's top players compete in an exhilarating match that promises to showcase skill, strategy, and sheer determination on the court. Brace yourself for a battle of champions that will keep you on the edge of your seat.",
+            "date": "2023-10-11",
+            "time": "14:00",
+            "location": "Istora Senayan, Jakarta, Indonesia",
+            "locationId": 1,
+            "category": 8,
+            "discount": 10,
+            "id": 20
+        },
+        {
+            "productName": "TRAVIS SCOTT UTOPIA CONCERT",
+            "image": "https://media.pitchfork.com/photos/64d4f35c94b0ef4633cc8332/2:1/w_2560%2Cc_limit/pitchfork-review-template_Wide.png",
+            "code": "UTOPIAAOTY",
+            "price": 5000000,
+            "details": "Prepare to be blown away by an electrifying performance as the legendary Travis Scott takes the stage at Rolling Loud Miami. Get ready for an unforgettable night of high-energy music, mind-blowing visuals, and a show that will leave you in awe.",
+            "date": "2023-09-01",
+            "time": "23:00",
+            "location": "Hard Rock Stadium, Miami, USA",
+            "category": 1,
+            "discount": 10,
+            "locationId": 2,
+            "id": 21
+        },
+        {
+            "productName": "PSSI: Indonesia vs Brazil",
+            "image": "https://awsimages.detik.net.id/visual/2023/05/13/timnas-indonesia-u-22-menang-melawan-vietnam-dalam-lanjutan-sea-games-2023-kamboja-2_169.jpeg?w=650",
+            "code": "ASNAWIGOAT",
+            "price": 2000000,
+            "details": "Get ready for an unforgettable football extravaganza as Indonesia goes head-to-head with the football giants Brazil in an international friendly match that promises excitement, skill, and a showcase of football brilliance. Brace yourself for a clash that will captivate fans and showcase the beauty of the beautiful game.",
+            "date": "2023-08-29",
+            "time": "19:00",
+            "location": "Gelora Bung Karno Stadium, Jakarta, Indonesia",
+            "category": 5,
+            "discount": 10,
+            "locationId": 1,
+            "id": 22
+        },
+        {
+            "productName": "Test ",
+            "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Battledore-and-shuttlecock.jpg",
+            "code": "BADMINTON2023",
+            "price": 100000,
+            "details": "Test",
+            "date": "2023-08-31",
+            "time": "20:00",
+            "location": "ICE",
+            "category": 8,
+            "discount": 20,
+            "locationId": 1,
+            "id": 23
+        }
+    ],
+    "category": [
+        {
+            "name": "Music",
+            "id": 1
+        },
+        {
+            "name": "Comedy",
+            "id": 2
+        },
+        {
+            "name": "Education",
+            "id": 3
+        },
+        {
+            "name": "Racing",
+            "id": 4
+        },
+        {
+            "name": "Football",
+            "id": 5
+        },
+        {
+            "name": "Basketball",
+            "id": 6
+        },
+        {
+            "name": "Tennis",
+            "id": 7
+        },
+        {
+            "name": "Badminton",
+            "id": 8
+        }
+    ],
+    "tickets": [
+        {
+            "userId": 1,
+            "firstName": "MH",
+            "lastName": "Haekal",
+            "email": "haekal@gmail.com",
+            "phoneNumber": "082110055558",
+            "refCode": true,
+            "id": 1
+        },
+        {
+            "userId": 2,
+            "firstName": "BK",
+            "lastName": "Prasetya",
+            "email": "bkprasetya@gmail.com",
+            "phoneNumber": "082112436747",
+            "refCode": true,
+            "id": 2
+        },
+        {
+            "userId": 3,
+            "firstName": "AT",
+            "lastName": "Wijaya",
+            "email": "andrean@gmail.com",
+            "phoneNumber": "082213807460",
+            "refCode": true,
+            "id": 3
+        },
+        {
+            "firstName": "Test",
+            "lastName": "ABC",
+            "email": "haekal123@gmail.com",
+            "phoneNumber": "082110055559",
+            "refCode": "",
+            "id": 4
+        },
+        {
+            "firstName": "Test1",
+            "lastName": "ABCD",
+            "email": "haekal1234@gmail.com",
+            "phoneNumber": "082110055550",
+            "refCode": "",
+            "id": 5
+        },
+        {
+            "firstName": "Gapake",
+            "lastName": "Ref",
+            "email": "haekal@gmail.com",
+            "phoneNumber": "082110055558",
+            "refCode": "",
+            "id": 6
+        },
+        {
+            "firstName": "Pake",
+            "lastName": "Ref",
+            "email": "haekal@gmail.com",
+            "phoneNumber": "082110055558",
+            "refCode": "LISABP",
+            "id": 7
+        },
+        {
+            "firstName": "Pake",
+            "lastName": "Ref",
+            "email": "haekal@gmail.com",
+            "phoneNumber": "082110055559",
+            "refCode": "CHRISMARTIN",
+            "id": 8
+        },
+        {
+            "firstName": "Pake",
+            "lastName": "Ref",
+            "email": "haekal@gmail.com",
+            "phoneNumber": "082110055558",
+            "refCode": "BADMINTON2023",
+            "id": 9
+        }
+    ],
+    "locations": [
+        {
+            "id": 1,
+            "name": "Indonesia"
+        },
+        {
+            "id": 2,
+            "name": "USA"
+        },
+        {
+            "id": 3,
+            "name": "Singapore"
+        },
+        {
+            "id": 4,
+            "name": "Other Countries"
+        }
+    ]
 }
