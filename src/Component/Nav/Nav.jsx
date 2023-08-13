@@ -1,9 +1,14 @@
 import { Link } from "react-router-dom";
 import { setFirstName } from "../../redux/Features";
 import { useDispatch, useSelector } from "react-redux";
+import axios from "axios";
+import { useEffect, useState } from "react";
 // import { setFirstName } from "../../redux/Features";
-
 function Nav() {
+  const [data, setData] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [point, setPoint] = useState(null);
+
   const { firstName } = useSelector((state) => state.user);
   const dispatch = useDispatch();
 
@@ -11,7 +16,19 @@ function Nav() {
     localStorage.removeItem("idLogin");
     dispatch(setFirstName(""));
   };
+  const fetchData = async () => {
+    const getId = localStorage.getItem("idLogin");
+    try {
+      const res = await axios.get(`http://localhost:4123/user/${getId}`);
+      console.log(res.data);
+      setEmail(res.data.email);
+      setPoint(res.data.point);
+    } catch (error) {}
+  };
 
+  useEffect(() => {
+    fetchData();
+  }, []);
   return (
     <div>
       <div className="navbar bg-black gap-2 px-40 h-[50px]">
@@ -44,9 +61,12 @@ function Nav() {
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <div>
-                  Test
-                </div>
+                <li className="hover:bg-white">
+                  <p className="hover:bg-white">{email}</p>
+                </li>
+                <li className="hover:bg-white">
+                  <p className="hover:bg-white">point : {point}</p>
+                </li>
                 <li>
                   <Link className="bg-black text-white font-semibold" onClick={onSignOut}>
                     Sign Out

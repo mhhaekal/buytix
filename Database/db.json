@@ -4,23 +4,27 @@
       "id": 1,
       "username": "bayu",
       "email": "bayu@gmail.com",
+      "point": 4,
       "password": "12345"
     },
     {
       "id": 2,
       "username": "andre",
       "email": "andre@gmail.com",
+      "point": 0,
       "password": "qwerty"
     },
     {
       "id": 3,
       "username": "MHHaekal",
       "email": "haekal@gmail.com",
+      "point": 4,
       "password": "54321"
     },
     {
       "username": "adudu",
       "email": "adudu@gmail.com",
+      "point": 4,
       "password": "12345",
       "id": 4
     },
@@ -33,6 +37,7 @@
     {
       "username": "adudi",
       "email": "adudi@gmail.com",
+      "point": 4,
       "password": "12345",
       "id": 6
     },
@@ -40,11 +45,13 @@
       "username": "adidu",
       "email": "adidu@gmail.com",
       "password": "12345",
+      "point": 1,
       "id": 7
     },
     {
       "username": "adiidu",
       "email": "adiidu@gmail.com",
+      "point": 4,
       "password": "12345",
       "id": 8
     }
@@ -481,6 +488,51 @@
       "refCode": "LISABP",
       "productId": 2,
       "id": 4
+    },
+    {
+      "firstName": "Andrean",
+      "lastName": "Tan",
+      "email": "andrean@gmail.com",
+      "phoneNumber": "082213807460",
+      "refCode": "LISABP",
+      "productId": 2,
+      "id": 5
+    },
+    {
+      "firstName": "adudi",
+      "lastName": "dadu",
+      "email": "dadu@gmail.com",
+      "phoneNumber": "123812938",
+      "refCode": "",
+      "productId": 2,
+      "id": 6
+    },
+    {
+      "firstName": "adudi",
+      "lastName": "dadu",
+      "email": "dadu@gmail.com",
+      "phoneNumber": "123812938",
+      "refCode": "",
+      "productId": 2,
+      "id": 7
+    },
+    {
+      "firstName": "adudi",
+      "lastName": "dadu",
+      "email": "dadu@gmail.com",
+      "phoneNumber": "123812938",
+      "refCode": "",
+      "productId": 2,
+      "id": 8
+    },
+    {
+      "firstName": "Andrean",
+      "lastName": "Tan",
+      "email": "andrean@gmail.com",
+      "phoneNumber": "082213807460",
+      "refCode": "",
+      "productId": 2,
+      "id": 9
     }
   ],
   "locations": [
@@ -499,6 +551,28 @@
     {
       "id": 4,
       "name": "Other Countries"
+    }
+  ],
+  "referalcode": [
+    {
+      "id": 1,
+      "userId": 7,
+      "code": "LISABP"
+    },
+    {
+      "userId": 1,
+      "code": "58489",
+      "id": 2
+    },
+    {
+      "userId": 2,
+      "code": "95256",
+      "id": 3
+    },
+    {
+      "userId": 2,
+      "code": "16462",
+      "id": 4
     }
   ]
 }
