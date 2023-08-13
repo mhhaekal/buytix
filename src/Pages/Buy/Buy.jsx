@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 
 export default function Buy() {
     const [products, setProduct] = useState(null);
+    const [dataSeller, setDataSeller] = useState([]);
     const { id } = useParams();
     const inputFirstName = useRef();
     const inputLastName = useRef();
@@ -20,11 +21,13 @@ export default function Buy() {
     const onFetchData = async () => {
         try {
             const res = await axios.get(`http://localhost:4123/products/${id}`);
+            const res2 = await axios.get(`http://localhost:4123/user`);
             console.log(res);
             setProduct(res.data);
+            setDataSeller(res2.data);
         } catch (error) { }
     };
-
+    const getSellerName = dataSeller.filter((value) => value.id === products.sellerId)
     const onCheckRef = async () => {
         try {
             const checkRef = await axios.get(`http://localhost:4123/products/${id}`);
@@ -75,11 +78,7 @@ export default function Buy() {
             }
 
             // toast.success('Create Event Success!')
-            // alert("Create Event Success!");
-            // setTimeout(() => {
-            //     <Link to={'/'}></Link>
-            // }, 3000)
-            // if (inputs) return navigate('/create/success')
+
         } catch (error) {
             console.log(error);
         }
@@ -106,7 +105,7 @@ export default function Buy() {
                                         <div className="text-gray-500">{products.date} |</div>
                                         <div className="text-gray-500">{products.time} |</div>
                                         <div className="text-gray-500">{products.location} |</div>
-                                        <div className="text-purple-800">by {products.seller}</div>
+                                        <div className="text-purple-800">by {getSellerName[0].username}</div>
                                     </div>
 
                                     <div className=" mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>

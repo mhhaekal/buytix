@@ -76,7 +76,7 @@ export default function CardPage() {
                                         <div className="text-3xl font-semibold text-purple-800 pb-5 ">Where and When</div>
                                         <div>
                                             <div className="font-semibold">Date and Time</div>
-                                            <div>{products.date} - {products.time}</div>
+                                            <div>{products.date} | {products.time}</div>
                                         </div>
                                         <div>
                                             <div className="font-semibold pt-5">Location</div>
