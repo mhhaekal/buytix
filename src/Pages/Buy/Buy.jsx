@@ -58,6 +58,7 @@ export default function Buy() {
                 email: inputEmail.current.value,
                 phoneNumber: inputPhoneNumber.current.value,
                 refCode: inputRefCode.current.value,
+                productId: Number(id),
 
             };
             if (
@@ -157,7 +158,7 @@ export default function Buy() {
 
 
                                 <div className="flex gap-5">
-                                    <Link to={'/'}>
+                                    <Link to={`/carditem/${id}`}>
                                         <div>
                                             <button className="mt-16 btn bg-black hover:bg-black text-white w-[300px] font-bold">CANCEL</button>
                                         </div>
@@ -181,7 +182,7 @@ export default function Buy() {
                                     <div className="flex gap-3">
                                         <div>Price</div>
                                     </div>
-                                    <div>Rp. {price}</div>
+                                    <div>Rp. {price.toLocaleString()}</div>
                                 </div>
 
 
@@ -189,7 +190,7 @@ export default function Buy() {
                                     <div>Discount</div>
                                     {discount ?
                                         <div>- Rp. {
-                                            discount
+                                            discount.toLocaleString()
                                         }</div>
                                         :
                                         <div>Rp. 0</div>
@@ -201,7 +202,7 @@ export default function Buy() {
 
                                 <div className="flex justify-between font-extrabold">
                                     <div>TOTAL</div>
-                                    <div>Rp. {price - discount}</div>
+                                    <div>Rp. {(price - discount).toLocaleString()}</div>
                                 </div>
 
                             </div>
