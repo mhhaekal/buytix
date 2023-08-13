@@ -14,6 +14,8 @@ export default function Buy() {
     const inputRefCode = useRef();
     const navigate = useNavigate();
     const [discount, setDiscount] = useState(null)
+    const [price, setPrice] = useState(null)
+    // const inputPriceTotal = useRef();
 
     const onFetchData = async () => {
         try {
@@ -38,6 +40,16 @@ export default function Buy() {
         }
     }
 
+    const onPrice = async () => {
+        try {
+            const checkRef = await axios.get(`http://localhost:4123/products/${id}`);
+            console.log(checkRef.data.price)
+            setPrice(checkRef.data.price)
+        } catch (error) {
+
+        }
+    }
+
     const onBuyEvent = async () => {
         try {
             const inputs = {
@@ -46,13 +58,14 @@ export default function Buy() {
                 email: inputEmail.current.value,
                 phoneNumber: inputPhoneNumber.current.value,
                 refCode: inputRefCode.current.value,
+
             };
             if (inputs.email == "") {
                 alert("Gaboleh Kosong Guys")
             } else {
                 await axios.post(`http://localhost:4123/tickets`, { ...inputs });
                 console.log(inputs)
-                if (inputs) return navigate('/create/success')
+                if (inputs) return navigate(`/buy/success/${id}`)
             }
 
             // toast.success('Create Event Success!')
@@ -66,6 +79,7 @@ export default function Buy() {
         }
     };
     useEffect(() => {
+        onPrice();
         console.log(discount)
         onFetchData();
     }, [discount]);
@@ -143,11 +157,9 @@ export default function Buy() {
                                             <button className="mt-16 btn bg-black hover:bg-black text-white w-[300px] font-bold">CANCEL</button>
                                         </div>
                                     </Link>
-                                    <Link to={``}>
-                                        <div>
-                                            <button onClick={onBuyEvent} className="mt-16 btn btn-primary w-[300px] font-bold">BUY</button>
-                                        </div>
-                                    </Link>
+                                    <div>
+                                        <button onClick={onBuyEvent} className="mt-16 btn btn-primary w-[300px] font-bold">BUY</button>
+                                    </div>
                                 </div>
 
                             </div>
@@ -162,20 +174,20 @@ export default function Buy() {
                                 <div className="flex justify-end text-3xl font-extrabold">Order Summary</div>
                                 <div className="flex justify-between">
                                     <div className="flex gap-3">
-                                        <div>VIP</div>
+                                        <div>Price</div>
                                     </div>
-                                    <div>Rpxxxxx</div>
+                                    <div>Rp. {price}</div>
                                 </div>
 
 
                                 <div className="flex justify-between">
                                     <div>Discount</div>
                                     {discount ?
-                                        <div>{
+                                        <div>- Rp. {
                                             discount
                                         }</div>
                                         :
-                                        <div>-Rpxxxx</div>
+                                        <div>Rp. 0</div>
                                     }
 
                                 </div>
@@ -184,7 +196,7 @@ export default function Buy() {
 
                                 <div className="flex justify-between font-extrabold">
                                     <div>TOTAL</div>
-                                    <div>Rpxxxx</div>
+                                    <div>Rp. {price - discount}</div>
                                 </div>
 
                             </div>

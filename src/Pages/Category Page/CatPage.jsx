@@ -4,19 +4,21 @@ import Footer from "../../Component/Footer/Footer"
 import axios from "axios"
 import { useEffect, useState } from "react"
 import { useLocation, useParams, useSearchParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 
 
 
 function CatPage() {
 
-
+    const [product, setProduct] = useState([])
     const [products, setProducts] = useState([])
     const [category, setCategory] = useState([])
-
+    const { idProduct } = useParams();
 
     const search = useLocation().search;
     const id = new URLSearchParams(search).get("category")
+    // const idProduct = new URLSearchParams(search).get("products")
     // console.log(id)
 
 
@@ -42,61 +44,80 @@ function CatPage() {
 
     }
 
+    const onFetchData = async () => {
+        try {
+            const res = await axios.get(`http://localhost:4123/products/${id}`);
+            console.log(res.data.id);
+            setProduct(res.data);
+        } catch (error) { }
+    };
+
 
     useEffect(() => {
+        onFetchData()
         fetchData()
         fetchCatName()
+
     }, [])
 
 
     return (
-        <div className="">
-
-            <Nav />
-
-            <div className="flex">
-                <div className=" flex-1 h-[1000px] ">
-
-                    <div className="mt-20">
+        <div>
+            {
+                !products ? null : (
+                    <div>
+                        <Nav />
 
                         <div className="flex">
-                            <div className="w-[51%] mx-40 font-bold text-5xl pb-4">
-                                {category}
+                            <div className=" flex-1 h-[1000px] ">
+
+                                <div className="mt-20">
+
+                                    <div className="flex">
+                                        <div className="w-[51%] mx-40 font-bold text-5xl pb-4">
+                                            {category}
+                                        </div>
+                                        <div className="dropdown dropdown-end">
+                                            <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-full text-white m-1">LOCATION</label>
+                                            <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
+                                                <li><a>Location 1</a></li>
+                                                <li><a>Location 2</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+
+                                    <div className=" ml-40 mr-20 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>
+                                </div>
+
+                                <div className="ml-40 mr-20 flex flex-col gap-5">
+                                    {
+                                        products.map((value, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    {/* <Link to={`/buy/${id}`}> */}
+                                                    <CatPageCard item={value} />
+                                                    {/* </Link> */}
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+
+
                             </div>
-                            <div className="dropdown dropdown-end">
-                                <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-full text-white m-1">LOCATION</label>
-                                <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-                                    <li><a>Location 1</a></li>
-                                    <li><a>Location 2</a></li>
-                                </ul>
+                            <div className="w-[25%] h-[vh] bg-gradient-to-r from-black to-purple-800">
+
+
                             </div>
                         </div>
 
-
-                        <div className=" ml-40 mr-20 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>
+                        <Footer />
                     </div>
-
-                    <div className="ml-40 mr-20 flex flex-col gap-5">
-                        {
-                            products.map((value, index) => {
-                                return (
-                                    <div key={index}>
-                                        <CatPageCard item={value} />
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
+                )
+            }
 
 
-                </div>
-                <div className="w-[25%] h-[vh] bg-gradient-to-r from-black to-purple-800">
-
-
-                </div>
-            </div>
-
-            <Footer />
 
         </div >
 

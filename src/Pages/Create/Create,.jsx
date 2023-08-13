@@ -16,6 +16,7 @@ export default function Create() {
     // const inputSeller = useRef();
     const inputCategory = useRef();
     const inputDiscount = useRef();
+    const inputLocationId = useRef();
     const navigate = useNavigate()
 
     const onCreateEvent = async () => {
@@ -32,6 +33,7 @@ export default function Create() {
                 // seller: inputSeller.current.value,
                 category: Number(inputCategory.current.value),
                 discount: Number(inputDiscount.current.value),
+                locationId: Number(inputLocationId.current.value)
             };
             // await axios.post(`http://localhost:4123/products`, { ...inputs });
             // console.log(inputs)
@@ -107,9 +109,23 @@ export default function Create() {
 
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text font-bold">Location</span>
+                            <span className="label-text font-bold">Venue Address</span>
                         </label>
                         <input type="text" ref={inputLocation} className="input input-bordered w-[400px]" />
+                    </div>
+                    <div>
+                        <label className="label">
+                            <span className="label-text font-bold">Location</span>
+                        </label>
+                        <select ref={inputLocationId} className="select select-bordered">
+                            <option disabled selected>
+                                Pick one
+                            </option>
+                            <option value="1">Indonesia</option>
+                            <option value="2">USA</option>
+                            <option value="3">Singapore</option>
+                            <option value="4">Other Countries</option>
+                        </select>
                     </div>
                     <div className="form-control">
                         <label className="label">
