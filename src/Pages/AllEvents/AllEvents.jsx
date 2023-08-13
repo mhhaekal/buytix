@@ -4,6 +4,7 @@ import Nav from "../../Component/Nav/Nav"
 import CatPageCard from "../Category Page/CatPageCard"
 import { useEffect, useState } from "react"
 import Checkbox from "../../Component/Checkbox/Checkbox"
+import { Link } from "react-router-dom"
 
 
 
@@ -124,7 +125,9 @@ function AllEvents() {
                                     products.map((value, index) => {
                                         return (
                                             <div key={index}>
-                                                <CatPageCard item={value} />
+                                                <Link to={`/buy/${value.id}`}>
+                                                    <CatPageCard item={value} />
+                                                </Link>
                                             </div>
                                         )
                                     })

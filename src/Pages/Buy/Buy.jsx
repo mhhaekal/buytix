@@ -60,8 +60,13 @@ export default function Buy() {
                 refCode: inputRefCode.current.value,
 
             };
-            if (inputs.email == "") {
-                alert("Gaboleh Kosong Guys")
+            if (
+                inputs.firstName == "" ||
+                inputs.lastName == "" ||
+                inputs.email == "" ||
+                inputs.phoneNumber == ""
+            ) {
+                alert("Data Belum Lengkap Guys")
             } else {
                 await axios.post(`http://localhost:4123/tickets`, { ...inputs });
                 console.log(inputs)

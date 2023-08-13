@@ -19,7 +19,7 @@ function CatPage() {
     const search = useLocation().search;
     const id = new URLSearchParams(search).get("category")
     // const idProduct = new URLSearchParams(search).get("products")
-    // console.log(id)
+    console.log(id)
 
 
     const fetchData = async () => {
@@ -95,9 +95,9 @@ function CatPage() {
                                         products.map((value, index) => {
                                             return (
                                                 <div key={index}>
-                                                    {/* <Link to={`/buy/${id}`}> */}
-                                                    <CatPageCard item={value} />
-                                                    {/* </Link> */}
+                                                    <Link to={`/buy/${value.id}`}>
+                                                        <CatPageCard item={value} />
+                                                    </Link>
                                                 </div>
                                             )
                                         })

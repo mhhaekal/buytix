@@ -330,6 +330,20 @@
       "discount": 10,
       "locationId": 1,
       "id": 22
+    },
+    {
+      "productName": "Test ",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/3/39/Battledore-and-shuttlecock.jpg",
+      "code": "BADMINTON2023",
+      "price": 100000,
+      "details": "Test",
+      "date": "2023-08-31",
+      "time": "20:00",
+      "location": "ICE",
+      "category": 8,
+      "discount": 20,
+      "locationId": 1,
+      "id": 23
     }
   ],
   "category": [
@@ -425,6 +439,22 @@
       "phoneNumber": "082110055558",
       "refCode": "LISABP",
       "id": 7
+    },
+    {
+      "firstName": "Pake",
+      "lastName": "Ref",
+      "email": "haekal@gmail.com",
+      "phoneNumber": "082110055559",
+      "refCode": "CHRISMARTIN",
+      "id": 8
+    },
+    {
+      "firstName": "Pake",
+      "lastName": "Ref",
+      "email": "haekal@gmail.com",
+      "phoneNumber": "082110055558",
+      "refCode": "BADMINTON2023",
+      "id": 9
     }
   ],
   "locations": [
