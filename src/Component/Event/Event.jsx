@@ -12,7 +12,7 @@ function Event() {
     const fetchData = async () => {
         try {
             const response = await axios.get(`http://localhost:4123/products`)
-            console.log(response.data.slice(0, 8))
+            console.log(response.data.slice())
             SetProducts(response.data.slice(0, 8))
 
         } catch (error) {
@@ -58,7 +58,9 @@ function Event() {
                 {products.map((value, index) => {
                     return (
                         <div key={index}>
-                            <Card item={value} />
+                            <Link to={`./carditem/${value.id}`}>
+                                <Card item={value} />
+                            </Link>
                         </div>
                     )
                 })

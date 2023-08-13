@@ -3,18 +3,18 @@ import { Link } from "react-router-dom"
 
 function CreateSuccess() {
     return (
-        <div>
-            <div className="h-[auto] bg-gradient-to-r from-black to-purple-800 w-[auto]">
+        <div className="h-screen">
+            <div className=" bg-gradient-to-r from-black to-purple-800 w-[auto]">
                 <div className="mx-36 py-16 text-6xl font-bold text-white">LETS CREATE AN EVENT!</div>
             </div>
 
-            <div className="bg-white min-h-screen">
+            <div className="bg-white h-auto">
 
                 <div className="mx-36 my-5 mb-[100px]">
-                    <div className="mb-40">
+                    <div className="mb-20">
                         <div className="mt-20 alert alert-success text-xl font-medium">
                             <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                            <span>Thank you. Your purchase has been confirmed!</span>
+                            <span>Thank you. Your event has been successfully created!</span>
                         </div>
                     </div>
 
