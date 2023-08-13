@@ -1,87 +1,94 @@
-import { useEffect, useState } from "react"
-import Card from "../Card/Card"
+import { useEffect, useState } from "react";
+import Card from "../Card/Card";
 import Skeleton from "../Skeleton/Skeleton";
-import axios from 'axios';
+import axios from "axios";
 import { Link } from "react-router-dom";
 
-
 function Event() {
+  const [products, SetProducts] = useState([]);
+  const [dataSeller, setDataSeller] = useState([]);
 
-    const [products, SetProducts] = useState([])
-    const [dataSeller, setDataSeller] = useState([]);
-
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(`http://localhost:4123/products`)
-            const res2 = await axios.get(`http://localhost:4123/user`);
-            // console.log(response.data)
-            SetProducts(response.data.slice(0, 8))
-            setDataSeller(res2.data);
-            // console.log(products)
-            // console.log(dataSeller)
-
-        } catch (error) {
-            console.log(error);
-        }
+  const fetchData = async () => {
+    try {
+      const response = await axios.get(`http://localhost:4123/products`);
+      const res2 = await axios.get(`http://localhost:4123/user`);
+      // console.log(response.data)
+      SetProducts(response.data.slice(0, 8));
+      setDataSeller(res2.data);
+      // console.log(products)
+      // console.log(dataSeller)
+    } catch (error) {
+      console.log(error);
     }
-    const getSellerName = products.filter((value) => value.sellerId === products.sellerId)
-    useEffect(() => {
-        // console.log(getSellerName)
-        fetchData()
-    }, [])
+  };
+  const productsSeller = products.map((value) => {
+    const seller = dataSeller.find((item) => item.id === value.id);
+    return {
+      ...value,
+      sellerName: seller ? seller.username : "data tidak ditemukan",
+    };
+  });
+  console.log(productsSeller);
+  useEffect(() => {
+    // console.log(getSellerName)
+    fetchData();
+  }, []);
 
-    if (!products) {
-        return <div>
-            <Skeleton />
-        </div>
-    }
-
+  if (!products) {
     return (
-        <div className="mt-10">
+      <div>
+        <Skeleton />
+      </div>
+    );
+  }
 
-            <div className="flex justify-between">
-                <div className=" mt-16 mx-40 font-bold text-5xl pb-4">
-                    Event
-                </div>
-                <div className="mt-16 mx-40 dropdown dropdown-end">
-                    <label tabIndex={0} className="btn btn-outline btn-primary btn-block rounded-full text-white">Sort</label>
-                    <div className="dropdown-content">
-
-                    </div>
-                    <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52">
-
-                        <li><a>Highest to Lowest Price</a></li>
-                        <li><a>Lowest to Highest Price</a></li>
-                    </ul>
-                </div>
-            </div>
-
-
-            <div className=" mx-40 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]">
-            </div>
-
-            <div className="flex flex-wrap justify-between mx-40 gap-10">
-                {products.map((value, index) => {
-                    return (
-                        <div key={index}>
-                            <Link to={`./carditem/${value.id}`}>
-                                <Card item={value} />
-                            </Link>
-                        </div>
-                    )
-                })
-                }
-            </div>
-
-            <div className="mt-20 flex justify-center">
-                <Link to={'/allevents'}>
-                    <button className="mx-40 btn w-[300px] font-extrabold">SHOW MORE EVENTS!</button>
-                </Link>
-            </div>
-
+  return (
+    <div className="mt-10">
+      <div className="flex justify-between">
+        <div className=" mt-16 mx-40 font-bold text-5xl pb-4">Event</div>
+        <div className="mt-16 mx-40 dropdown dropdown-end">
+          <label
+            tabIndex={0}
+            className="btn btn-outline btn-primary btn-block rounded-full text-white"
+          >
+            Sort
+          </label>
+          <div className="dropdown-content"></div>
+          <ul
+            tabIndex={0}
+            className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
+          >
+            <li>
+              <a>Highest to Lowest Price</a>
+            </li>
+            <li>
+              <a>Lowest to Highest Price</a>
+            </li>
+          </ul>
         </div>
-    )
+      </div>
+
+      <div className=" mx-40 mb-10 bg-gradient-to-r from-black to-purple-800 h-[8px]"></div>
+
+      <div className="flex flex-wrap justify-between mx-40 gap-10">
+        {productsSeller.map((value, index) => {
+          return (
+            <div key={index}>
+              <Link to={`./carditem/${value.id}`}>
+                <Card item={value} />
+              </Link>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-20 flex justify-center">
+        <Link to={"/allevents"}>
+          <button className="mx-40 btn w-[300px] font-extrabold">SHOW MORE EVENTS!</button>
+        </Link>
+      </div>
+    </div>
+  );
 }
 
-
-export default Event
+export default Event;
