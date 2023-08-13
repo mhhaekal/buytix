@@ -32,8 +32,9 @@ function Nav() {
         </div>
 
         <div className="navbar-end flex-none flex gap-3">
-          <div className="btn btn-ghost bg-black text-white">Location</div>
-          <div className="btn btn-ghost bg-black text-white">Create Event</div>
+          <Link to={"/create"}>
+            <div className="btn btn-ghost bg-black text-white">Create Event</div>
+          </Link>
           {firstName ? (
             <div className="dropdown dropdown-hover dropdown-end">
               <label tabIndex={0} className="btn btn-ghost m-1 bg-black text-white">
@@ -43,9 +44,9 @@ function Nav() {
                 tabIndex={0}
                 className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52"
               >
-                <li>
-                  <a>Item 1</a>
-                </li>
+                <div>
+                  Test
+                </div>
                 <li>
                   <Link className="bg-black text-white font-semibold" onClick={onSignOut}>
                     Sign Out

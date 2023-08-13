@@ -7,6 +7,7 @@ import Footer from "../../Component/Footer/Footer"
 
 export default function CardPage() {
     const [products, setProduct] = useState(null);
+    const [dataSeller, setDataSeller] = useState([]);
     const { id } = useParams();
     const [selected, setSelected] = useState({})
     const qty = useRef()
@@ -14,6 +15,7 @@ export default function CardPage() {
     const onFetchData = async () => {
         try {
             const res = await axios.get(`http://localhost:4123/products/${id}`);
+            const res2 = await axios.get(`http://localhost:4123/user`);
             console.log(res);
             // const totalStock = res.data.stocks.reduce((a, b) => {
             //     return a + b
@@ -21,12 +23,17 @@ export default function CardPage() {
 
             // setSelected({ ...selected, stockSize: totalStock })
             setProduct(res.data);
+            setDataSeller(res2.data);
+
         } catch (error) { }
     };
-
+    const getSellerName = dataSeller.filter((value) => value.id === products.sellerId)
     useEffect(() => {
         onFetchData();
+        // console.log(getSellerName[0].username)
     }, []);
+
+
 
 
 
@@ -78,7 +85,7 @@ export default function CardPage() {
                                     </div>
 
 
-                                    <div className=" font-semibold text-purple-800 pb-5"> by {products.seller}</div>
+                                    <div className=" font-semibold text-purple-800 pb-5"> by {getSellerName[0].username}</div>
 
                                     <div className=" ">
                                         <Link to={`/buy/${id}`}>

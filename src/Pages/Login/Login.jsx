@@ -31,7 +31,7 @@ function Login() {
             <img src={require("./LogoWhite.png")} alt="Logo" className=" h-[100px] w-[210px]" />
 
             <div className="ml-4">
-              <span className="font-bold">Username</span>
+              <span className="font-bold">Email</span>
               <InputText
                 handleStyle={{ width: "500px" }}
                 handlePlaceholder={"username"}

@@ -95,7 +95,7 @@ function CatPage() {
                                         products.map((value, index) => {
                                             return (
                                                 <div key={index}>
-                                                    <Link to={`/buy/${value.id}`}>
+                                                    <Link to={`/carditem/${value.id}`}>
                                                         <CatPageCard item={value} />
                                                     </Link>
                                                 </div>

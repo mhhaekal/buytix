@@ -13,7 +13,6 @@ export default function Create() {
     const inputDate = useRef();
     const inputTime = useRef();
     const inputLocation = useRef();
-    // const inputSeller = useRef();
     const inputCategory = useRef();
     const inputDiscount = useRef();
     const inputLocationId = useRef();
@@ -21,6 +20,7 @@ export default function Create() {
 
     const onCreateEvent = async () => {
         try {
+            const getId = localStorage.getItem("idLogin")
             const inputs = {
                 productName: inputProductName.current.value,
                 image: inputImage.current.value,
@@ -30,15 +30,25 @@ export default function Create() {
                 date: inputDate.current.value,
                 time: inputTime.current.value,
                 location: inputLocation.current.value,
-                // seller: inputSeller.current.value,
+                sellerId: Number(getId),
                 category: Number(inputCategory.current.value),
                 discount: Number(inputDiscount.current.value),
                 locationId: Number(inputLocationId.current.value)
             };
             // await axios.post(`http://localhost:4123/products`, { ...inputs });
             // console.log(inputs)
-            if (inputs.price == "") {
-                alert("Gaboleh Kosong Guys")
+            if (
+                inputs.productName == "" ||
+                inputs.image == "" ||
+                inputs.price == "" ||
+                inputs.details == "" ||
+                inputs.date == "" ||
+                inputs.time == "" ||
+                inputs.location == "" ||
+                inputs.category == "" ||
+                inputs.locationId == ""
+            ) {
+                alert("Data Belum Lengkap Guys")
             } else {
                 await axios.post(`http://localhost:4123/products`, { ...inputs });
                 console.log(inputs)

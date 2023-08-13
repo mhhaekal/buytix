@@ -7,20 +7,26 @@ import { Link } from "react-router-dom";
 
 function Event() {
 
-    const [products, SetProducts] = useState(null)
+    const [products, SetProducts] = useState([])
+    const [dataSeller, setDataSeller] = useState([]);
 
     const fetchData = async () => {
         try {
             const response = await axios.get(`http://localhost:4123/products`)
-            console.log(response.data.slice())
+            const res2 = await axios.get(`http://localhost:4123/user`);
+            // console.log(response.data)
             SetProducts(response.data.slice(0, 8))
+            setDataSeller(res2.data);
+            // console.log(products)
+            // console.log(dataSeller)
 
         } catch (error) {
             console.log(error);
         }
     }
-
+    const getSellerName = products.filter((value) => value.sellerId === products.sellerId)
     useEffect(() => {
+        // console.log(getSellerName)
         fetchData()
     }, [])
 
