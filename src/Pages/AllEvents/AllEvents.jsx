@@ -175,11 +175,18 @@ function AllEvents() {
                   })
                 ) : !filteredData.length ? (
                   // <div className="">
-                  <img
-                    src="https://img.freepik.com/free-vector/search-concept-landing-page_52683-21330.jpg?w=826&t=st=1691869742~exp=1691870342~hmac=f27681b86f3a0cce7620acb8890b5ec59c5b1dec72673909ad52ea45474ca4c7"
-                    alt=""
-                    className="h-full w-full"
-                  />
+
+                  <div className="alert alert-error"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    <span>Sorry :( Looks like the event that you are looking for is not available</span>
+
+                    {/* <img
+                      src="https://img.freepik.com/free-vector/search-concept-landing-page_52683-21330.jpg?w=826&t=st=1691869742~exp=1691870342~hmac=f27681b86f3a0cce7620acb8890b5ec59c5b1dec72673909ad52ea45474ca4c7"
+                      alt=""
+                      className="h-full w-full"
+                    /> */}
+                  </div>
                 ) : (
                   filteredData.map((value, index) => {
                     return (
