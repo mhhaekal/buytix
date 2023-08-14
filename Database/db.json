@@ -4,7 +4,7 @@
       "id": 1,
       "username": "bayu",
       "email": "bayu@gmail.com",
-      "point": 2,
+      "point": 3,
       "password": "12345"
     },
     {
@@ -61,6 +61,13 @@
       "password": "123456",
       "point": 1,
       "id": 9
+    },
+    {
+      "username": "albob",
+      "email": "albob@gmail.com",
+      "password": "123456",
+      "point": 0,
+      "id": 10
     }
   ],
   "products": [
@@ -438,6 +445,21 @@
       "discount": 10,
       "locationId": 1,
       "id": 25
+    },
+    {
+      "productName": "Indonesia 4.0 Conference & Expo 2023",
+      "image": "https://img.evbuc.com/https%3A%2F%2Fcdn.evbuc.com%2Fimages%2F532551189%2F1593806027573%2F1%2Foriginal.20230609-040523?h=2000&w=720&auto=format%2Ccompress&q=75&sharp=10&s=54363eb6715f6e4b0f8d2aebbc958582",
+      "code": "",
+      "price": 100000,
+      "details": "Setelah sukses menggelar Indonesia 4.0 Conference & Expo sejak 2021, Naganaya bersama dengan Kementerian Perindustrian dan Dewan Transformasi Digital Indonesia dengan bangga mempersembahkan Indonesia 4.0 Conference & Expo 2023. Indonesia 4.0 Conference & Expo merupakan suatu acara yang fokus mendukung industri 4.0 di Indonesia hal ini sejalan dengan program Kementerian Perindustrian yaitu Making Indonesia 4.0.",
+      "date": "2023-08-23",
+      "time": "17:00",
+      "location": "JIEXPO Kemayoran",
+      "sellerId": 3,
+      "category": 3,
+      "discount": 0,
+      "locationId": 1,
+      "id": 26
     }
   ],
   "category": [
@@ -591,6 +613,33 @@
       "refCode": "22936",
       "productId": 5,
       "id": 13
+    },
+    {
+      "firstName": "MH",
+      "lastName": "Haekal",
+      "email": "haekal123@gmail.com",
+      "phoneNumber": "082110055558",
+      "refCode": "78338",
+      "productId": 22,
+      "id": 14
+    },
+    {
+      "firstName": "MH",
+      "lastName": "Haekal",
+      "email": "haekal123@gmail.com",
+      "phoneNumber": "082110055558",
+      "refCode": "",
+      "productId": 26,
+      "id": 15
+    },
+    {
+      "firstName": "Albert",
+      "lastName": "Santoso",
+      "email": "albob@gmail.com",
+      "phoneNumber": "081210158888",
+      "refCode": "",
+      "productId": 3,
+      "id": 16
     }
   ],
   "locations": [
@@ -651,6 +700,21 @@
       "userId": 1,
       "code": "78338",
       "id": 8
+    },
+    {
+      "userId": 3,
+      "code": "78183",
+      "id": 9
+    },
+    {
+      "userId": 3,
+      "code": "62178",
+      "id": 10
+    },
+    {
+      "userId": 10,
+      "code": "77383",
+      "id": 11
     }
   ]
 }

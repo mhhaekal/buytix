@@ -15,6 +15,7 @@ function AllEvents() {
     // ini dibuat untuk menampung id
     const [activefilters, setActiveFilters] = useState([]);
     const [selectedFilter, setSelectedFilter] = useState([]);
+    const [dataSeller, setDataSeller] = useState([]);
 
     // const name = "Gelora Bung Karno Stadium, Jakarta, Indonesia";
 
@@ -23,18 +24,27 @@ function AllEvents() {
             const ticket = await axios.get(`http://localhost:4123/products`);
             const loc = await axios.get(`http://localhost:4123/locations`);
             const type = await axios.get("http://localhost:4123/category");
-            // const
-
-            // console.log(loc);
+            const res2 = await axios.get(`http://localhost:4123/user`);
             setBackupProducts(ticket.data);
             setProducts(ticket.data);
             setType(type.data);
             setLocation(loc.data);
+            setDataSeller(res2.data);
             // console.log(location);
         } catch (error) {
             console.log(error);
         }
     };
+
+    const productsSeller = backupProducts.map((value) => {
+        const seller = dataSeller.find((item) => item.id === value.id);
+        return {
+            ...value,
+            sellerName: seller ? seller.username : "data tidak ditemukan",
+        };
+    });
+    console.log(productsSeller);
+
 
     // const handleCheckbox = (_typeId) => {
     //   const tempSelectedType = [...selectedType];

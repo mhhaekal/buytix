@@ -23,7 +23,7 @@ function Nav() {
       console.log(res.data);
       setEmail(res.data.email);
       setPoint(res.data.point);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   useEffect(() => {
@@ -40,11 +40,6 @@ function Nav() {
 
         <div className="navbar-center">
           <div className="form-control h-8 w-[300px]">
-            <input
-              type="text"
-              placeholder="your journey starts here."
-              className="input input-bordered rounded-full md:w-auto"
-            />
           </div>
         </div>
 
