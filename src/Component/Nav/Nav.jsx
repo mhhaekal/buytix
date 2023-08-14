@@ -23,7 +23,7 @@ function Nav() {
       console.log(res.data);
       setEmail(res.data.email);
       setPoint(res.data.point);
-    } catch (error) { }
+    } catch (error) {}
   };
 
   useEffect(() => {
@@ -39,14 +39,17 @@ function Nav() {
         </Link>
 
         <div className="navbar-center">
-          <div className="form-control h-8 w-[300px]">
-          </div>
+          <div className="form-control h-8 w-[300px]"></div>
         </div>
 
         <div className="navbar-end flex-none flex gap-3">
-          <Link to={"/create"}>
+          {firstName ? (
+            <Link to={"/create"}>
+              <div className="btn btn-ghost bg-black text-white">Create Event</div>
+            </Link>
+          ) : (
             <div className="btn btn-ghost bg-black text-white">Create Event</div>
-          </Link>
+          )}
           {firstName ? (
             <div className="dropdown dropdown-hover dropdown-end">
               <label tabIndex={0} className="btn btn-ghost m-1 bg-black text-white">
