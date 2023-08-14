@@ -171,20 +171,20 @@ export default function Create() {
                             <label className="label">
                                 <span className="label-text font-bold">Ticket Price</span>
                             </label>
-                            <input type="number" ref={inputPrice} className="input input-bordered w-[400px]" />
+                            <input type="number" ref={inputPrice} className="input input-bordered w-[300px]" />
                         </div>
                     </div>
                     <div>
                         <label className="label">
                             <span className="label-text font-bold">Referral Discount (%)</span>
                         </label>
-                        <input type="number" ref={inputDiscount} className="input input-bordered w-[400px]" />
+                        <input type="number" ref={inputDiscount} className="input input-bordered w-[300px]" />
                     </div>
                     <div className="form-control">
                         <label className="label">
                             <span className="label-text font-bold">Type Your Referal Code</span>
                         </label>
-                        <input type="text" ref={inputCode} className="input input-bordered w-[400px]" />
+                        <input type="text" ref={inputCode} className="input input-bordered w-[300px]" />
                     </div>
 
                 </div>

@@ -3,6 +3,7 @@ import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast"
 
 export default function Buy() {
   const [products, setProduct] = useState(null);
@@ -27,14 +28,14 @@ export default function Buy() {
       console.log(res);
       setProduct(res.data);
       setDataSeller(res2.data);
-    } catch (error) {}
+    } catch (error) { }
   };
   const getSellerName = dataSeller.filter((value) => value.id === products.sellerId);
   const onCheckRef = async () => {
     const getId = localStorage.getItem("idLogin");
     console.log(getId);
     try {
-      if (!inputRefCode.current.value) return alert("tolong diisi terlebih dahulu");
+      if (!inputRefCode.current.value) return toast.error("Please type the referral code");
       //   const getReferal = awat axios.get()
       const getPrice = await axios.get(`http://localhost:4123/products/${id}`);
       const checkRef = await axios.get(
@@ -46,7 +47,7 @@ export default function Buy() {
         const userReferalId = Number(checkRef.data[0].userId);
         if (userReferalId === Number(getId)) {
           //   console.log("lu curang goblok");
-          return alert("lu curang goblok");
+          return toast.error("You cannot use your own refferal code, please try again");
         } else {
           const fixPrice = (10 / 100) * getPrice.data.price;
           setDiscount(fixPrice);
@@ -55,11 +56,13 @@ export default function Buy() {
           setPoint(point);
           await axios.patch(`http://localhost:4123/user/${userReferalId}`, { point: point + 1 });
           setIsButton(true);
-          alert(`Selamat anda mendapatkan discount 10%`);
+          return toast.success(`Congratulation! you get 10% discount`);
+
         }
       } else if (!checkRef.data.length) {
         // console.log(">>>>");
-        return alert("Code Referal tidak ditemukan , harap coba kembali");
+        return toast.error("Refferal code not found, please try again")
+
       }
     } catch (error) {
       console.log(error);
@@ -83,19 +86,19 @@ export default function Buy() {
         inputs.email === "" ||
         inputs.phoneNumber === ""
       ) {
-        alert("Data Belum Lengkap Guys");
+        toast.error("Please fill all the data!");
       } else {
         await axios.post(`http://localhost:4123/tickets`, { ...inputs });
         const res = await axios.get(`http://localhost:4123/user/${getId}`);
         if (res.data.point === 0) {
-          return alert("Point yang ada miliki tidak cukup");
+          return toast.error("You don't have enough points");
         } else {
           await axios.patch(`http://localhost:4123/user/${getId}`, { point: res.data.point - 2 });
         }
         console.log(inputs);
         if (inputs) return navigate(`/buy/success/${id}`);
       }
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const onPrice = async () => {
@@ -103,7 +106,7 @@ export default function Buy() {
       const checkRef = await axios.get(`http://localhost:4123/products/${id}`);
       console.log(checkRef.data.price);
       setPrice(checkRef.data.price);
-    } catch (error) {}
+    } catch (error) { }
   };
 
   const onBuyEvent = async () => {
@@ -122,7 +125,7 @@ export default function Buy() {
         inputs.email === "" ||
         inputs.phoneNumber === ""
       ) {
-        alert("Data Belum Lengkap Guys");
+        toast.error("Please fill all the data!");
       } else {
         await axios.post(`http://localhost:4123/tickets`, { ...inputs });
         console.log(inputs);
@@ -142,6 +145,7 @@ export default function Buy() {
 
   return (
     <div>
+      <Toaster />
       {!products ? null : (
         <div className="flex h-screen">
           <div className="w-[70%]">

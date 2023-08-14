@@ -1,6 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { Toaster, toast } from "react-hot-toast"
 // import { useDispatch } from "react-redux";
 
 const initialState = {
@@ -19,23 +20,32 @@ export const userSlice = createSlice({
 });
 
 export const onRegisterAsync = (email, username, pwd) => async (dispatch) => {
+  <Toaster />
   const data = {
     username: username,
     email: email,
     password: pwd,
+    point: 0,
   };
   try {
     const checkEmail = await axios.get(`http://localhost:4123/user?email=${data.email}`);
 
     if (checkEmail.data.length) {
-      alert("email telah digunakan");
+      return toast.error("email already registerd, please use another email");
     } else {
       const res = await axios.post(`http://localhost:4123/user`, data);
       console.log(res.data);
       const getId = await axios.get(`http://localhost:4123/user?email=${data.email}`);
       localStorage.setItem("idLogin", getId.data[0].id);
-      dispatch(setFirstName(data.username));
-      alert(`${data.username} selamat bergabung`);
+
+      // dispatch(setFirstName(data.username));
+
+      setTimeout(() => {
+        dispatch(setFirstName(data.username))
+      }, 2000)
+
+      toast.success(` Welcome onboard! ${data.username}`);
+      //toast.success(`${data.username} Welcome onboard!`)
     }
     // if(res.data.length) return alert('email telah digunakan')
   } catch (error) {
@@ -44,15 +54,25 @@ export const onRegisterAsync = (email, username, pwd) => async (dispatch) => {
 };
 
 export const onLoginAsync = (inputEmail, inputPassword) => async (dispatch) => {
+  <Toaster />
   try {
     const res = await axios.get(
       `http://localhost:4123/user?email=${inputEmail}&password=${inputPassword}`
     );
-    if (!res.data.length) return alert("akun tidak ditemukan");
+    if (!res.data.length) return toast.error("email or password is not found, please try again");
 
     localStorage.setItem("idLogin", res.data[0].id);
-    dispatch(setFirstName(res.data[0].username));
-    alert(`Selamat bergabung kembali ${res.data[0].username}`);
+
+
+    setTimeout(() => {
+      dispatch(setFirstName(res.data[0].username))
+    }, 2000)
+
+    //dispatch(setFirstName(res.data[0].username));
+
+    //alert(`Welcome Back ${res.data[0].username}!`);
+    toast.success(`Welcome Back ${res.data[0].username}!`)
+
     if (res.data.length) return true;
   } catch (error) {
     console.log(error);

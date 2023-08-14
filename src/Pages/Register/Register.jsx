@@ -3,6 +3,8 @@ import InputText from "../../Component/Input Text/InputText";
 import { useDispatch, useSelector } from "react-redux";
 import { onRegisterAsync } from "../../redux/Features";
 import { Link, useNavigate } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast"
+
 function Register() {
   const [inputNewEmail, setInputNewEmail] = useState("");
   const [inputNewPassword, setInputNewPassword] = useState("");
@@ -18,6 +20,9 @@ function Register() {
   if (firstName) return navigate("/");
   return (
     <div className="h-screen">
+
+      <Toaster />
+
       <div className="flex h-screen">
         <div className="w-[60%] ">
           <div className="ml-20 mt-32">

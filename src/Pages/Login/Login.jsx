@@ -4,6 +4,7 @@ import { onLoginAsync } from "../../redux/Features";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast"
 
 function Login() {
   const [inputEmail, setInputEmail] = useState("");
@@ -23,8 +24,12 @@ function Login() {
       navigate("/");
     }
   }, [firstName]);
+
+
   return (
     <div className="h-screen">
+
+      <Toaster />
       <div className="flex h-screen">
         <div className="w-[60%] ">
           <div className="ml-20 mt-32">
