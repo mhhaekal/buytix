@@ -4,7 +4,7 @@ import { onLoginAsync } from "../../redux/Features";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import { Link } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast"
+import toast, { Toaster } from "react-hot-toast";
 
 function Login() {
   const [inputEmail, setInputEmail] = useState("");
@@ -14,6 +14,9 @@ function Login() {
   const dispatch = useDispatch();
 
   const handleLogin = (inputEmail, inputPassword) => {
+    if (inputEmail === "" || inputPassword === "") {
+      return toast.error("Please fill all the data");
+    }
     console.log(inputEmail);
     console.log(inputPassword);
     dispatch(onLoginAsync(inputEmail, inputPassword));
@@ -25,10 +28,8 @@ function Login() {
     }
   }, [firstName]);
 
-
   return (
     <div className="h-screen">
-
       <Toaster />
       <div className="flex h-screen">
         <div className="w-[60%] ">

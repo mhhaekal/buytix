@@ -45,27 +45,8 @@ function AllEvents() {
       sellerName: seller ? seller.username : "data tidak ditemukan",
     };
   });
-  productsSeller.forEach((value) => console.log(value.sellerName));
+  //   productsSeller.forEach((value) => console.log(value.sellerName));
 
-  // const handleCheckbox = (_typeId) => {
-  //   const tempSelectedType = [...selectedType];
-  //   // console.log(tempSelectedType)
-  //   const tempProducts = [...backupProducts];
-
-  //   if (tempSelectedType.includes(_typeId)) {
-  //     tempSelectedType.splice(tempSelectedType.indexOf(_typeId), 1);
-  //   } else {
-  //     tempSelectedType.push(_typeId);
-  //   }
-
-  //   const filtered = tempProducts.filter((value) => {
-  //     // console.log(value);
-  //     return tempSelectedType.includes(value.category);
-  //   });
-
-  //   setselectedType(tempSelectedType);
-  //   filtered.length ? setProducts(filtered) : setProducts(tempProducts);
-  // };
   const handleChange = (categoryId) => {
     // 1
     console.log(categoryId);
@@ -97,7 +78,7 @@ function AllEvents() {
       // console.log(activefilters);
     }
   };
-  let filteredData = products.filter((item) => {
+  let filteredData = productsSeller.filter((item) => {
     if (selectedFilter.length && !activefilters.length) {
       return selectedFilter.includes(item.locationId);
     } else if (!selectedFilter.length && activefilters.length) {
@@ -110,7 +91,7 @@ function AllEvents() {
   useEffect(() => {
     fetchData();
     console.log(filteredData);
-  }, []);
+  }, [filteredData]);
 
   if (!products) {
     return <div>Loading...</div>;

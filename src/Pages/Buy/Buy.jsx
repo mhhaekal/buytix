@@ -3,7 +3,7 @@ import axios from "axios";
 import { useEffect, useState, useRef } from "react";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast"
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Buy() {
   const [products, setProduct] = useState(null);
@@ -28,7 +28,7 @@ export default function Buy() {
       console.log(res);
       setProduct(res.data);
       setDataSeller(res2.data);
-    } catch (error) { }
+    } catch (error) {}
   };
   const getSellerName = dataSeller.filter((value) => value.id === products.sellerId);
   const onCheckRef = async () => {
@@ -57,12 +57,10 @@ export default function Buy() {
           await axios.patch(`http://localhost:4123/user/${userReferalId}`, { point: point + 1 });
           setIsButton(true);
           return toast.success(`Congratulation! you get 10% discount`);
-
         }
       } else if (!checkRef.data.length) {
         // console.log(">>>>");
-        return toast.error("Refferal code not found, please try again")
-
+        return toast.error("Refferal code not found, please try again");
       }
     } catch (error) {
       console.log(error);
@@ -90,7 +88,7 @@ export default function Buy() {
       } else {
         await axios.post(`http://localhost:4123/tickets`, { ...inputs });
         const res = await axios.get(`http://localhost:4123/user/${getId}`);
-        if (res.data.point === 0) {
+        if (res.data.point <= 1) {
           return toast.error("You don't have enough points");
         } else {
           await axios.patch(`http://localhost:4123/user/${getId}`, { point: res.data.point - 2 });
@@ -98,7 +96,7 @@ export default function Buy() {
         console.log(inputs);
         if (inputs) return navigate(`/buy/success/${id}`);
       }
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const onPrice = async () => {
@@ -106,7 +104,7 @@ export default function Buy() {
       const checkRef = await axios.get(`http://localhost:4123/products/${id}`);
       console.log(checkRef.data.price);
       setPrice(checkRef.data.price);
-    } catch (error) { }
+    } catch (error) {}
   };
 
   const onBuyEvent = async () => {

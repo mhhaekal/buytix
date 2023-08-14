@@ -2,19 +2,19 @@ import { Link } from "react-router-dom";
 import { useRef } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-// import toast, { Toaster } from 'react-hot-toast';
+import toast, { Toaster } from "react-hot-toast";
 
 export default function Create() {
   const inputProductName = useRef();
   const inputImage = useRef();
-  const inputCode = useRef();
+  //   const inputCode = useRef();
   const inputPrice = useRef();
   const inputDetails = useRef();
   const inputDate = useRef();
   const inputTime = useRef();
   const inputLocation = useRef();
   const inputCategory = useRef();
-  const inputDiscount = useRef();
+  //   const inputDiscount = useRef();
   const inputLocationId = useRef();
   const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ export default function Create() {
       const inputs = {
         productName: inputProductName.current.value,
         image: inputImage.current.value,
-        code: inputCode.current.value,
+        // code: inputCode.current.value,
         price: Number(inputPrice.current.value),
         details: inputDetails.current.value,
         date: inputDate.current.value,
@@ -32,23 +32,23 @@ export default function Create() {
         location: inputLocation.current.value,
         sellerId: Number(getId),
         category: Number(inputCategory.current.value),
-        discount: Number(inputDiscount.current.value),
+        // discount: Number(inputDiscount.current.value),
         locationId: Number(inputLocationId.current.value),
       };
       // await axios.post(`http://localhost:4123/products`, { ...inputs });
       // console.log(inputs)
       if (
-        inputs.productName == "" ||
-        inputs.image == "" ||
-        inputs.price == "" ||
-        inputs.details == "" ||
-        inputs.date == "" ||
-        inputs.time == "" ||
-        inputs.location == "" ||
-        inputs.category == "" ||
-        inputs.locationId == ""
+        inputs.productName === "" ||
+        inputs.image === "" ||
+        inputs.price === "" ||
+        inputs.details === "" ||
+        inputs.date === "" ||
+        inputs.time === "" ||
+        inputs.location === "" ||
+        inputs.category === "" ||
+        inputs.locationId === ""
       ) {
-        alert("Data Belum Lengkap Guys");
+        toast.error("Data Belum Lengkap Guys");
       } else {
         await axios.post(`http://localhost:4123/products`, { ...inputs });
         console.log(inputs);
@@ -68,6 +68,7 @@ export default function Create() {
 
   return (
     <div>
+      <Toaster />
       <div className="h-[200px] bg-gradient-to-r from-black to-purple-800">
         <div className="mx-36 py-16 text-6xl font-bold text-white">LETS CREATE AN EVENT!</div>
       </div>

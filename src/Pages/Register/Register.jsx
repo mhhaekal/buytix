@@ -3,7 +3,7 @@ import InputText from "../../Component/Input Text/InputText";
 import { useDispatch, useSelector } from "react-redux";
 import { onRegisterAsync } from "../../redux/Features";
 import { Link, useNavigate } from "react-router-dom";
-import toast, { Toaster } from "react-hot-toast"
+import toast, { Toaster } from "react-hot-toast";
 
 function Register() {
   const [inputNewEmail, setInputNewEmail] = useState("");
@@ -14,13 +14,15 @@ function Register() {
   const navigate = useNavigate();
 
   const onRegister = (inputNewEmail, inputUserNewName, inputNewPassword) => {
+    if (inputNewEmail === "" || inputNewPassword === "" || inputUserNewName === "") {
+      return toast.error("Please fill all the data");
+    }
     dispatch(onRegisterAsync(inputNewEmail, inputUserNewName, inputNewPassword));
   };
 
   if (firstName) return navigate("/");
   return (
     <div className="h-screen">
-
       <Toaster />
 
       <div className="flex h-screen">
