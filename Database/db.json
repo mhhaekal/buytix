@@ -4,14 +4,14 @@
       "id": 1,
       "username": "bayu",
       "email": "bayu@gmail.com",
-      "point": 0,
+      "point": 6,
       "password": "12345"
     },
     {
       "id": 2,
       "username": "andre",
       "email": "andre@gmail.com",
-      "point": 2,
+      "point": 0,
       "password": "qwerty"
     },
     {
@@ -76,6 +76,13 @@
       "password": "",
       "point": 0,
       "id": 11
+    },
+    {
+      "username": "kebonnnn",
+      "email": "kebonq@gmail.com",
+      "password": "12345",
+      "point": 2,
+      "id": 12
     }
   ],
   "products": [
@@ -451,6 +458,19 @@
       "category": 7,
       "locationId": 4,
       "id": 27
+    },
+    {
+      "productName": "FIFA Showdown - Indonesia vs. Thailand",
+      "image": "https://awsimages.detik.net.id/community/media/visual/2023/05/04/timnas-indonesia-u-22-melawan-myanmar_169.jpeg?w=1200",
+      "price": 1000000,
+      "details": "Football fans, brace yourselves for an exhilarating face-off in the heart of FIFA action! Watch as Indonesia and Thailand, two of Southeast Asia's footballing giants, take the field in a battle of skill, strategy, and national pride. In a region where football is more than just a sport—it's a passion, a way of life—this is one match you won't want to miss.",
+      "date": "2023-08-30",
+      "time": "20:12",
+      "location": "GBK",
+      "sellerId": 12,
+      "category": 5,
+      "locationId": 1,
+      "id": 28
     }
   ],
   "category": [
@@ -631,6 +651,42 @@
       "refCode": "62178",
       "productId": 7,
       "id": 16
+    },
+    {
+      "firstName": "Andrean",
+      "lastName": "Tan",
+      "email": "andrean923@gmail.com",
+      "phoneNumber": "082213807460",
+      "refCode": "",
+      "productId": 26,
+      "id": 17
+    },
+    {
+      "firstName": "Andrean",
+      "lastName": "Tan",
+      "email": "andrean923@gmail.com",
+      "phoneNumber": "082213807460",
+      "refCode": "",
+      "productId": 28,
+      "id": 18
+    },
+    {
+      "firstName": "Andrean",
+      "lastName": "Tan",
+      "email": "andrean923@gmail.com",
+      "phoneNumber": "082213807460",
+      "refCode": "85944",
+      "productId": 3,
+      "id": 19
+    },
+    {
+      "firstName": "Andrean",
+      "lastName": "Tan",
+      "email": "andrean923@gmail.com",
+      "phoneNumber": "082213807460",
+      "refCode": "85944",
+      "productId": 7,
+      "id": 20
     }
   ],
   "locations": [
@@ -741,6 +797,26 @@
       "userId": 1,
       "code": "37744",
       "id": 18
+    },
+    {
+      "userId": 1,
+      "code": "18984",
+      "id": 19
+    },
+    {
+      "userId": 12,
+      "code": "85944",
+      "id": 20
+    },
+    {
+      "userId": 1,
+      "code": "51156",
+      "id": 21
+    },
+    {
+      "userId": 1,
+      "code": "54416",
+      "id": 22
     }
   ]
 }

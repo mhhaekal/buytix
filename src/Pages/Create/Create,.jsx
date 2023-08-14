@@ -48,8 +48,11 @@ export default function Create() {
         inputs.category === "" ||
         inputs.locationId === ""
       ) {
-        toast.error("Data Belum Lengkap Guys");
+        return toast.error("Data Belum Lengkap Guys");
       } else {
+        if (inputPrice.current.value === "") {
+          return toast.error("Tolong diisi bagian price");
+        }
         await axios.post(`http://localhost:4123/products`, { ...inputs });
         console.log(inputs);
         if (inputs) return navigate("/create/success");
