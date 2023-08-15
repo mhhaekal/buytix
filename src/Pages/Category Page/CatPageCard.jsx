@@ -8,7 +8,7 @@ function CatPageCard(props) {
                 <div className="flex justify-between">
                     <div className="w-[20%]">
                         <div className="font-bold text-lg" >{props.item.date}</div>
-                        <div className="font-bold text-purple-800">by {props.item.sellerName}</div>
+                        <div className="font-bold text-gray-400">{props.item.time}</div>
                     </div>
 
                     <div className="w-[70%]">
